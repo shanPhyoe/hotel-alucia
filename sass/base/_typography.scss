@@ -1,0 +1,58 @@
+body {
+    font-family: $font-family-default;
+    font-size: $font-size-default;
+    color: $font-color-default;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    color: $color-white;
+    font-weight: 400;
+
+    &--main {
+        font-size: $font-size-huge;
+
+        &--2 {
+            font-family: $font-family-alt;
+            font-weight: 700;
+        }
+    }
+
+    &--sub {
+        font-size: $font-size-large;
+
+        &--2,
+        &--3 {
+            font-family: $font-family-alt;
+            font-weight: 700;
+        }
+    }
+}
+
+.heading-secondary {
+    color: $color-black;
+
+    &--main {
+        font-size: $font-size-x-large;
+        letter-spacing: 0.1em;
+    }
+
+    &--sub {
+        font-size: $font-size-default;
+    }
+}
+
+.heading-tertiary {
+    color: $color-black;
+    font-size: $font-size-medium;
+    letter-spacing: 0.1em;
+}
+
+.paragraph {
+    font-size: $font-size-default;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

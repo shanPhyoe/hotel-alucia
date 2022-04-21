@@ -1,0 +1,25 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: $font-size-medium;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 1.5rem 2rem;
+        font-family: $font-family-alt;
+    }
+
+    &--default {
+        color: $font-color-default;
+    }
+
+    &--blue {
+        color: $color-white;
+        background-color: $color-primary-dark;
+    }
+
+    &--grid {
+        color: $font-color-inverted;
+    }
+}

@@ -1,0 +1,46 @@
+.title {
+    font-family: $font-family-alt;
+    width: 23rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & div:nth-child(1) {
+        height: 4rem;
+    }
+    & div:nth-child(2) {
+        height: 2.5rem;
+    }
+    & div:nth-child(3) {
+        margin-top: auto;
+    }
+
+    &__main {
+        font-weight: 500;
+        font-size: $font-size-large;
+    }
+
+    &__sub {
+        font-weight: 200;
+        font-size: $font-size-medium;
+        letter-spacing: 0.3em;
+    }
+
+    &__rating {
+        width: 16rem;
+        display: flex;
+        justify-content: space-between;
+
+        & .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            fill: $color-secondary-dark;
+            transition: transform 2s linear;
+        }
+    }
+
+    &:hover &__rating .icon {
+        transform: rotate(144deg);
+    }
+}

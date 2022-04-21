@@ -1,0 +1,129 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.8s ease-in-out;
+    z-index: 9999;
+    font-family: $font-family-alt;
+
+    &__menu {
+        margin-left: 6rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &--icon {
+            position: relative;
+
+            &,
+            &::before,
+            &::after {
+                display: inline-block;
+                background-color: $font-color-default;
+                width: 2.5rem;
+                height: 1px;
+                transition: all 0.8s ease-in-out;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+            }
+
+            &::before {
+                top: -5px;
+            }
+
+            &::after {
+                top: 5px;
+            }
+        }
+
+        &:hover &--icon {
+            transform: translate(1rem);
+        }
+
+        &--text {
+            font-size: $font-size-small;
+            margin-right: 2rem;
+        }
+    }
+
+    &__logo {
+        color: $font-color-default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        transition: color 0.8s ease-in-out;
+        cursor: pointer;
+
+        &--sub {
+            font-size: $font-size-small;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        &--main {
+            font-family: $font-family-logo;
+            font-size: $font-size-medium;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        &:hover &--sub {
+            opacity: 0;
+        }
+
+        &:hover &--main {
+            transform: scale(1.1) translateY(-1rem);
+        }
+    }
+
+    &__button {
+        margin-right: 6rem;
+        padding-right: 0 !important;
+        transition: color 0.8s ease-in-out, transform 0.8s ease-in-out;
+        background-color: transparent;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &--inverted {
+        color: $font-color-inverted;
+    }
+
+    &--inverted &__logo {
+        color: $font-color-inverted;
+    }
+    &--inverted &__button {
+        color: $font-color-inverted;
+    }
+
+    &--inverted &__menu {
+        color: $font-color-inverted;
+
+        &--icon {
+            height: 0;
+            background-color: transparent;
+
+            &::before,
+            &::after {
+                background-color: $font-color-inverted;
+            }
+
+            &::before {
+                transform: translateY(5px) rotate(405deg);
+            }
+            &::after {
+                transform: translateY(-5px) rotate(-405deg);
+            }
+        }
+    }
+}

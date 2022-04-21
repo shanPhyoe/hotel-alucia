@@ -1,0 +1,38 @@
+.services {
+    &__wrapper {
+        width: 80vw;
+        margin: 3rem auto;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        width: 15rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__icon {
+        width: 3.6rem;
+        height: 3.6rem;
+        fill: $color-primary-light;
+    }
+
+    &__text {
+        font-size: $font-size-small;
+
+        // &::selection {
+        //     background-color: $color-white;
+        //     color: $color-primary-light;
+        // }
+    }
+}

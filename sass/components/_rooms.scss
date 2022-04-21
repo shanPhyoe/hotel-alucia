@@ -1,0 +1,51 @@
+.rooms {
+    max-width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    height: fit-content;
+
+    &__room {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 18rem;
+        }
+
+        & img {
+            transition: transform 0.8s ease-out;
+
+            &:hover {
+                transform: translateY(-1rem);
+            }
+        }
+
+        &--image-1 {
+            width: 55vw;
+            border-radius: 0 4.5rem 0 4.5rem;
+        }
+
+        &--image-2 {
+            width: 28vw;
+            border-radius: 4.5rem 0 4.5rem 0;
+            position: absolute;
+            bottom: -10%;
+            left: 50%;
+        }
+
+        &--text {
+            padding: 0;
+            position: absolute;
+            top: 30%;
+            right: 0%;
+            transition: letter-spacing 0.8s ease-out;
+
+            &:hover {
+                letter-spacing: 0.5rem;
+            }
+        }
+
+        & img:hover ~ &--text {
+            letter-spacing: 0.5rem;
+        }
+    }
+}
