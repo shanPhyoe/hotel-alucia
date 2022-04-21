@@ -16,7 +16,7 @@
     &__large {
         grid-column: 1/3;
         height: 44vw;
-        background-image: url('/assets/img/private-double-small.jpg');
+        background-image: url('/assets/img/private-double.jpg');
 
         // @media (max-width: 1280px) {
         //     height: 45rem;
@@ -46,10 +46,10 @@
         // }
 
         &--1 {
-            background-image: url('/assets/img/deluxe-double-small.jpg');
+            background-image: url('/assets/img/deluxe-double.jpg');
         }
         &--2 {
-            background-image: url('/assets/img/standard-double-small.jpg');
+            background-image: url('/assets/img/standard-double.jpg');
         }
 
         & > .btn {
