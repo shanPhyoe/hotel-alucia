@@ -174,9 +174,8 @@ featuredLabels.forEach(label => {
         featuredTextBoxes[currentFeaturedBox].classList.add(
             'feature-box__text-box--inactive'
         );
-        // featuredLabels.forEach(label => (label.style.pointerEvents = `none`));
 
-        // 1600ms is css animation time
+        // 900ms is css animation time
         setTimeout(removeInactive, 900);
 
         const activeIndex = label.dataset.key;
