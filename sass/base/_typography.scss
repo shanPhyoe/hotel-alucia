@@ -44,9 +44,13 @@ body {
 }
 
 .heading-tertiary {
-    color: $color-black;
-    font-size: $font-size-medium;
+    font-size: $font-size-s-large;
+    font-weight: 700;
     letter-spacing: 0.1em;
+
+    & span {
+        font-family: $font-family-alt;
+    }
 }
 
 .paragraph {

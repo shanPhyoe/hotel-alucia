@@ -1,0 +1,56 @@
+.footer {
+    // background-color: grey;
+    background-color: $color-black;
+    // padding: 6rem;
+
+    &__logo-box {
+        color: $color-secondary-light;
+        margin-bottom: 6rem;
+    }
+
+    &__navigation {
+        margin: 3rem;
+        width: 35rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        height: 12rem;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-family: $font-family-alt;
+        font-size: $font-size-medium;
+    }
+
+    &__copyright {
+        color: $color-white;
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 3.6rem;
+        height: 3.6rem;
+        fill: $color-white;
+        margin: 1rem;
+    }
+
+    &__button {
+        width: fit-content;
+        display: block;
+        border: 2px solid $color-white;
+    }
+}

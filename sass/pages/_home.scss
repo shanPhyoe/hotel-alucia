@@ -65,7 +65,7 @@
     padding: 0rem 6rem;
 
     &__heading {
-        margin-bottom: 3rem;
+        margin: 0 6rem 3rem;
     }
 }
 
@@ -85,15 +85,84 @@
     margin: 6rem;
 
     &__heading {
-        margin-bottom: 6rem;
+        width: fit-content;
+        margin: 12rem auto;
     }
 }
 
 .section-explore {
-    margin: 6rem;
+    margin: 12rem 6rem 6rem;
     padding: 0 6rem;
 
     &__heading {
+        margin: 0 6rem 3rem;
+    }
+}
+
+.section-book {
+    height: 50rem;
+    margin-bottom: 12rem;
+    background-image: url(../../assets/img/form-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        color: $color-white;
+    }
+
+    &__info-card {
+        position: absolute;
+        bottom: 10%;
+        left: 20%;
+    }
+
+    &__form {
+        position: absolute;
+        top: 30%;
+        right: 15%;
+    }
+}
+
+.section-blog {
+    padding: 0 6rem;
+    margin: 2rem auto 0;
+
+    &__heading {
+        margin: 3rem 6rem;
+    }
+
+    &__news {
         margin-bottom: 6rem;
+    }
+
+    &__newsletter {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: $color-black;
+    }
+
+    & .form {
+        margin: 0 auto;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    & .form__input {
+        border: 1px solid $color-black;
+        text-align: center;
+
+        // &::placeholder {
+        //     text-align: center;
+        // }
+    }
+
+    &__button {
+        margin: 3rem;
+        box-shadow: 0 1rem 5px rgba($color-black, 0.25);
     }
 }

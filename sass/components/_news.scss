@@ -1,0 +1,54 @@
+.news {
+    width: 100%;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    transition: 0.8s;
+    overflow: hidden;
+
+    &__date {
+        color: $color-white;
+        width: 3.5rem;
+        height: 5.5rem;
+        background-color: $color-primary-dark;
+        border: 1px solid $color-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 1.5rem;
+        left: 10%;
+        z-index: 1000;
+
+        &--day {
+            font-size: $font-size-default;
+            letter-spacing: 0.1em;
+        }
+
+        &--month {
+            font-size: $font-size-small;
+        }
+    }
+
+    &__image {
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 1.8s ease-out;
+    }
+
+    &__title {
+        color: $color-white;
+        text-decoration: none;
+        width: 60%;
+        font-size: $font-size-medium;
+        font-weight: 500;
+        position: absolute;
+        left: 20%;
+        top: 75%;
+    }
+
+    &:hover &__image {
+        transform: scale(1.1);
+    }
+}

@@ -168,6 +168,8 @@ const removeInactive = function () {
 
 featuredLabels.forEach(label => {
     label.addEventListener('click', () => {
+        if (label.classList.contains('feature-box__label--active')) return;
+
         featuredImgBoxes[currentFeaturedBox].classList.add(
             'feature-box__images-box--inactive'
         );
@@ -184,4 +186,20 @@ featuredLabels.forEach(label => {
         setActiveElement(activeIndex, 'feature-box__text-box');
         currentFeaturedBox = activeIndex;
     });
+});
+
+// -------------------------------------------------------------------- //
+// FORM LABEL WAVE ANIMATION
+const formLabels = document.querySelectorAll('.form__label');
+
+formLabels.forEach(label => {
+    console.log(label.innerText.split(''));
+    label.innerHTML = label.innerText
+        .split('')
+        .map((letter, i) => {
+            return `<span style="transition-delay:${
+                i * 50
+            }ms">${letter}</span>`;
+        })
+        .join('');
 });

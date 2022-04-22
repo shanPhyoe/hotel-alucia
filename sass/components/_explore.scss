@@ -1,15 +1,16 @@
 .explore {
     margin: 0 auto;
-    max-width: 90vw;
+    max-width: 75vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     &__box {
-        height: 35rem;
-        margin: 2rem;
-        border-radius: 5px;
+        height: 20vw;
+        margin: 4rem;
+        // border-radius: 5px;
         background-repeat: no-repeat;
         background-size: cover;
+        // background-position: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,7 +26,7 @@
                 letter-spacing: 0.2em;
                 opacity: 0;
                 transition: opacity 0.8s;
-                top: 5%;
+                top: 10%;
                 left: 5%;
             }
 
@@ -58,24 +59,27 @@
         }
 
         &--2 {
-            background-image: url(/assets/img/place-1.jpg);
+            background-image: url(../../assets/img/place-1.jpg);
+            background-position: left;
         }
         &--3 {
-            background-image: url(/assets/img/place-2.jpg);
+            background-image: url(../../assets/img/place-2.jpg);
             align-items: flex-end;
+            background-position: right;
         }
         &--6 {
-            background-image: url(/assets/img/place-3.jpg);
+            background-image: url(../../assets/img/place-3.jpg);
+            background-position: left;
         }
         &--7 {
-            background-image: url(/assets/img/place-4.jpg);
+            background-image: url(../../coverage/infrastructure/place-4.jpg);
             align-items: flex-end;
+            background-position: right;
         }
     }
 
     &__heading {
-        font-size: $font-size-large;
-        letter-spacing: 0.1em;
+        color: $color-black;
         margin: 0 auto 3rem;
     }
 

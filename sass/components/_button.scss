@@ -8,6 +8,7 @@
         cursor: pointer;
         padding: 1.5rem 2rem;
         font-family: $font-family-alt;
+        border: none;
     }
 
     &--default {
@@ -17,6 +18,18 @@
     &--blue {
         color: $color-white;
         background-color: $color-primary-dark;
+    }
+
+    &--black {
+        color: $color-white;
+        background-color: $color-black;
+        border: 2px solid $color-white;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+            border-color: $font-color-inverted;
+        }
     }
 
     &--grid {

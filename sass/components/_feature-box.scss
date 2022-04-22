@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    margin-bottom: 6rem;
+    // margin-bottom: 3rem;
 
     &__images-container {
         min-width: 33vw;
@@ -24,7 +24,7 @@
         &--4 {
             transform: translateY(-50%);
             position: absolute;
-            top: 0%;
+            top: 10%;
         }
 
         &--active {
@@ -63,6 +63,7 @@
         margin-bottom: 4rem;
         opacity: 0.4;
         cursor: pointer;
+        user-select: none;
 
         &:hover {
             opacity: 0.7;
@@ -83,10 +84,14 @@
         width: 36rem;
         justify-self: center;
         position: relative;
+        user-select: none;
     }
 
     &__text-box {
-        height: 100%;
+        padding: 3rem;
+        border-radius: 5px;
+        box-shadow: 1rem 1rem 5px rgba($color-black, 0.5);
+        height: fit-content;
         opacity: 0;
         transition: transform 1.6s ease-out;
 

@@ -1,0 +1,74 @@
+.form {
+    width: 38rem;
+    background-color: rgba($font-color-default, 0.2);
+    padding: 3rem 5rem;
+    border-radius: 3px;
+
+    &__heading {
+        width: fit-content;
+        margin: 0 auto 3rem;
+        color: $color-white;
+        border-bottom: 2px solid $color-white;
+        transition: all 0.8s;
+    }
+
+    &:hover &__heading {
+        color: $color-primary-dark;
+        border-color: $color-primary-dark;
+        padding: 0 3rem;
+    }
+
+    &__group {
+        position: relative;
+        margin-bottom: 4rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+
+        & > * {
+            display: block;
+            width: 45%;
+        }
+    }
+
+    &__input {
+        height: 4.5rem;
+        width: 100%;
+        font-family: $font-family-alt;
+        font-size: $font-size-default;
+        padding: 1rem;
+        background-color: $color-white;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__label {
+        display: block;
+        position: absolute;
+        right: 20%;
+        top: 20%;
+
+        & span {
+            display: inline-block;
+            font-weight: 500;
+            transition: 0.8s cubic-bezier(0.1, 0.87, 0.82, 1.42);
+        }
+    }
+
+    &__input:focus + &__label span {
+        color: $color-primary;
+        transform: translateY(-3rem);
+    }
+
+    &__button {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
