@@ -66,12 +66,13 @@ body {
   font-weight: 400; }
   .heading-primary--main {
     font-size: 4.8rem; }
-    .heading-primary--main--2 {
+    .heading-primary--main span:last-child {
       font-family: "Montserrat", sans-serif;
       font-weight: 700; }
   .heading-primary--sub {
     font-size: 3.2rem; }
-    .heading-primary--sub--2, .heading-primary--sub--3 {
+    .heading-primary--sub span:nth-child(2),
+    .heading-primary--sub span:nth-child(3) {
       font-family: "Montserrat", sans-serif;
       font-weight: 700; }
 
@@ -788,7 +789,6 @@ body {
 
 .row {
   width: 120rem;
-  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -803,28 +803,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
 
 .section-header {
   width: 100vw;
-  padding: 7rem 6rem 6rem 6rem; }
+  padding: 7rem 6rem 6rem; }
 
 .section-about {
   height: 100vh;
-  position: relative;
-  padding: 6rem; }
-  .section-about .title {
-    color: #000;
-    position: absolute;
-    top: 0;
-    left: 10%; }
-  .section-about .info-card {
-    position: absolute;
-    left: 10%;
-    bottom: 10%; }
+  padding: 0 6rem; }
+  .section-about .row {
+    width: 100%;
+    height: 100%; }
+    .section-about .row .col-1-of-3 {
+      flex: 1;
+      height: 90%; }
   .section-about__heading {
-    max-width: 55rem;
-    margin: 6rem auto; }
+    margin: 6rem auto 6rem; }
   .section-about__text {
     margin: 0 auto;
     max-width: 43rem; }
@@ -832,22 +828,21 @@ body {
     position: absolute;
     border-radius: 1.5rem;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.8s ease-out; }
+    transition: transform 0.8s ease-out;
+    object-fit: cover; }
     .section-about__image--1 {
-      width: 32rem;
-      height: 42rem;
-      top: 20%;
-      left: 5%; }
+      aspect-ratio: 3/4;
+      width: 20vw;
+      top: 30%; }
     .section-about__image--2 {
-      width: 32rem;
-      height: 42rem;
-      top: 0%;
-      right: 5%; }
+      aspect-ratio: 3/4;
+      width: 20vw;
+      top: 0%; }
     .section-about__image--3 {
-      width: 48rem;
-      height: 32rem;
-      right: 10%;
-      bottom: 10%;
+      aspect-ratio: 3/2;
+      width: 25vw;
+      right: 30%;
+      bottom: 0%;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transition: transform 1s ease-out; }
 

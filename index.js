@@ -20,28 +20,38 @@ const layerFour = document.getElementById('layer-4');
 const layerFive = document.getElementById('layer-5');
 const layerSix = document.getElementById('layer-6');
 
+// the smaller the multiplier, the smaller distance the element will move
+const parallaxMultiplierOne = 0.01;
+const parallaxMultiplierTwo = 0.02;
+const parallaxMultiplierThree = 0.04;
+
 header.addEventListener('mousemove', function (e) {
     const pageX = e.clientX - window.innerWidth / 2;
     const pageY = e.clientY - window.innerHeight / 2;
 
-    layerOne.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
-    layerTwo.style.transform = `translate(${20 - pageX * 0.01}%, ${
-        20 - pageY * 0.01
-    }%)`;
-    layerThree.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
-    layerFour.style.transform = `translate(${20 - pageX * 0.02}%, ${
-        20 - pageY * 0.02
-    }%)`;
-    layerFive.style.transform = `translate(${20 - pageX * 0.02}%, ${
-        20 - pageY * 0.02
-    }%)`;
-    layerSix.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
+    layerOne.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+
+    layerTwo.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierOne
+    }%, ${20 - pageY * parallaxMultiplierOne}%)`;
+
+    layerThree.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+
+    layerFour.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierTwo
+    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+
+    layerFive.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierTwo
+    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+
+    layerSix.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
 });
 
 // -------------------------------------------------------------------- //
@@ -202,22 +212,3 @@ formLabels.forEach(label => {
         })
         .join('');
 });
-
-// -------------------------------------------------------------------- //
-// FOOTER SLIDEUP
-// const sectionBlog = document.querySelector('.section-blog');
-// const footer = document.querySelector('.footer');
-
-// const footerReveal = function (entries) {
-//     const [entry] = entries;
-
-//     if (entry.isIntersecting) {
-//         console.log('intersecting');
-//         footer.style.visibility = 'visible';
-//     } else {
-//         footer.style.visibility = 'hidden';
-//     }
-// };
-
-// const sectionBlogObserver = new IntersectionObserver(footerReveal, obsOption);
-// sectionBlogObserver.observe(sectionBlog);
