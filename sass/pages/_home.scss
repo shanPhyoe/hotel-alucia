@@ -102,7 +102,7 @@
 .section-book {
     height: 50rem;
     margin-bottom: 12rem;
-    background-image: url(../../assets/img/form-bg.jpg);
+    background-image: url(../../assets/img/book-bg.jpg);
     background-attachment: fixed;
     background-size: cover;
 
@@ -155,10 +155,6 @@
     & .form__input {
         border: 1px solid $color-black;
         text-align: center;
-
-        // &::placeholder {
-        //     text-align: center;
-        // }
     }
 
     &__button {

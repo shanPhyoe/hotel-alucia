@@ -46,14 +46,14 @@ header.addEventListener('mousemove', function (e) {
 
 // -------------------------------------------------------------------- //
 // ABOUT SECTION PARALLAX
-const aboutSection = document.getElementById('about');
+const sectionAbout = document.getElementById('about');
 const parallaxImgOne = document.getElementById('parallax-img-1');
 const parallaxImgTwo = document.getElementById('parallax-img-2');
 const parallaxImgThree = document.getElementById('parallax-img-3');
 
 const imageParallaxFunctionality = function () {
-    const yValueOne = aboutSection.getBoundingClientRect().top / 40;
-    const yValueTwo = aboutSection.getBoundingClientRect().top / 20;
+    const yValueOne = sectionAbout.getBoundingClientRect().top / 40;
+    const yValueTwo = sectionAbout.getBoundingClientRect().top / 20;
 
     parallaxImgOne.style.transform = `translate3d(0, ${yValueOne}rem, 0)`;
     parallaxImgTwo.style.transform = `translate3d(0, ${yValueOne}rem, 0)`;
@@ -75,8 +75,8 @@ const obsOption = {
     root: null,
     threshold: 0,
 };
-const aboutSectionObserver = new IntersectionObserver(imageParallax, obsOption);
-aboutSectionObserver.observe(aboutSection);
+const sectionAboutObserver = new IntersectionObserver(imageParallax, obsOption);
+sectionAboutObserver.observe(sectionAbout);
 
 // -------------------------------------------------------------------- //
 // adding active class to only one certain element of same elements type
@@ -193,7 +193,6 @@ featuredLabels.forEach(label => {
 const formLabels = document.querySelectorAll('.form__label');
 
 formLabels.forEach(label => {
-    console.log(label.innerText.split(''));
     label.innerHTML = label.innerText
         .split('')
         .map((letter, i) => {
@@ -203,3 +202,22 @@ formLabels.forEach(label => {
         })
         .join('');
 });
+
+// -------------------------------------------------------------------- //
+// FOOTER SLIDEUP
+// const sectionBlog = document.querySelector('.section-blog');
+// const footer = document.querySelector('.footer');
+
+// const footerReveal = function (entries) {
+//     const [entry] = entries;
+
+//     if (entry.isIntersecting) {
+//         console.log('intersecting');
+//         footer.style.visibility = 'visible';
+//     } else {
+//         footer.style.visibility = 'hidden';
+//     }
+// };
+
+// const sectionBlogObserver = new IntersectionObserver(footerReveal, obsOption);
+// sectionBlogObserver.observe(sectionBlog);

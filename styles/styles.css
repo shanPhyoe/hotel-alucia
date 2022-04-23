@@ -50,9 +50,8 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
-  height: 100vw;
   background-color: #000; }
 
 body {
@@ -126,12 +125,10 @@ body {
 
 .btn--black {
   color: #fff;
-  background-color: #000;
-  border: 2px solid #fff; }
+  background-color: #000; }
   .btn--black:hover {
     background-color: #fff;
-    color: #000;
-    border-color: #ddd; }
+    color: #000; }
 
 .btn--grid {
   color: #ddd; }
@@ -593,7 +590,8 @@ body {
   height: 10rem;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  user-select: none; }
   .title div:nth-child(1) {
     height: 4rem; }
   .title div:nth-child(2) {
@@ -623,14 +621,20 @@ body {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  transition: transform 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   background-color: #fff; }
   .wrapper--inverted {
     transform: translate(25%, 5%) scale(0.9);
     border-radius: 1rem; }
 
 .footer {
-  background-color: #000; }
+  background-color: #000;
+  height: 30rem;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  visibility: hidden; }
   .footer__logo-box {
     color: #ffd700;
     margin-bottom: 6rem; }
@@ -651,7 +655,11 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 2rem; }
   .footer__copyright {
-    color: #fff; }
+    color: #fff;
+    user-select: none; }
+    .footer__copyright span {
+      font-family: "MonteCarlo", cursive;
+      font-size: 2rem; }
   .footer__icon-box {
     display: flex;
     justify-content: center; }
@@ -661,6 +669,7 @@ body {
     fill: #fff;
     margin: 1rem; }
   .footer__button {
+    margin: auto 0;
     width: fit-content;
     display: block;
     border: 2px solid #fff; }
@@ -784,6 +793,7 @@ body {
 
 .row {
   width: 120rem;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -794,6 +804,7 @@ body {
     width: 45%; }
   .row .col-1-of-3 {
     width: 30%;
+    min-height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -874,7 +885,7 @@ body {
 .section-book {
   height: 50rem;
   margin-bottom: 12rem;
-  background-image: url(../../assets/img/form-bg.jpg);
+  background-image: url(../../assets/img/book-bg.jpg);
   background-attachment: fixed;
   background-size: cover;
   position: relative; }

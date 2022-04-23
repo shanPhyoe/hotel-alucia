@@ -1,7 +1,12 @@
 .footer {
-    // background-color: grey;
     background-color: $color-black;
-    // padding: 6rem;
+    height: 30rem;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    visibility: hidden;
 
     &__logo-box {
         color: $color-secondary-light;
@@ -34,6 +39,12 @@
 
     &__copyright {
         color: $color-white;
+        user-select: none;
+
+        & span {
+            font-family: $font-family-logo;
+            font-size: $font-size-medium;
+        }
     }
 
     &__icon-box {
@@ -49,6 +60,7 @@
     }
 
     &__button {
+        margin: auto 0;
         width: fit-content;
         display: block;
         border: 2px solid $color-white;
