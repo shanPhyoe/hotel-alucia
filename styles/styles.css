@@ -619,7 +619,6 @@ body {
 
 .wrapper {
   height: 100vh;
-  overflow-y: scroll;
   overflow-x: hidden;
   transition: all 0.8s ease-in-out;
   background-color: #fff; }
@@ -630,11 +629,7 @@ body {
 .footer {
   background-color: #000;
   height: 30rem;
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  visibility: hidden; }
+  width: 100vw; }
   .footer__logo-box {
     color: #ffd700;
     margin-bottom: 6rem; }
