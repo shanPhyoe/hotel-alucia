@@ -1,10 +1,14 @@
 .row {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
     // justify-content: space-between;
-    gap: 3rem;
+    column-gap: 3rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
 
     .col-1-of-2 {
         width: 45%;
@@ -26,6 +30,5 @@
 .double-row {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     align-items: center;
 }

@@ -1,3 +1,12 @@
+.section {
+    transition: opacity 1.2s, transform 1.2s;
+
+    &--hidden {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+}
+
 .section-header {
     width: 100vw;
     padding: 7rem 6rem 6rem;
@@ -125,6 +134,7 @@
 .section-blog {
     padding: 0 6rem;
     margin: 2rem auto 0;
+    width: 120rem;
 
     &__heading {
         margin: 3rem 6rem;

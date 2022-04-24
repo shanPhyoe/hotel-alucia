@@ -1,13 +1,38 @@
 // MENU BUTTON FUNCTIONING
-
 const navigation = document.getElementById('navigation');
+const menu = document.getElementById('menu');
+const menuLink = document.querySelectorAll('.menu__link');
 const wrapper = document.getElementById('wrapper');
 
-navigation.addEventListener('click', function (e) {
-    const menu = e.target.closest('.navigation__menu');
-    if (!menu) return;
+const menuFunctionality = function () {
     navigation.classList.toggle('navigation--inverted');
     wrapper.classList.toggle('wrapper--inverted');
+    menu.classList.toggle('menu--active');
+
+    if (!menu.classList.contains('menu--active')) {
+        menuLink.forEach(link => {
+            link.style.opacity = 0;
+        });
+    } else {
+        menuLink.forEach((link, index) => {
+            setTimeout(() => {
+                link.style.opacity = 1;
+            }, 1000 + index * 400);
+        });
+    }
+};
+
+navigation.addEventListener('click', function (e) {
+    const menuButton = e.target.closest('.navigation__menu');
+    if (!menuButton) return;
+
+    menuFunctionality();
+});
+
+menuLink.forEach(link => {
+    link.addEventListener('click', () => {
+        menuFunctionality();
+    });
 });
 
 // -------------------------------------------------------------------- //
@@ -52,6 +77,15 @@ header.addEventListener('mousemove', function (e) {
     layerSix.style.transform = `translate(${
         20 - pageX * parallaxMultiplierThree
     }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+});
+
+// -------------------------------------------------------------------- //
+// HEADING BUTTON SCROLLING
+const headerButton = document.getElementById('header-button');
+const rooms = document.getElementById('rooms');
+
+headerButton.addEventListener('click', function () {
+    rooms.scrollIntoView({ behavior: 'smooth' });
 });
 
 // -------------------------------------------------------------------- //
@@ -220,6 +254,33 @@ formLabels.forEach(label => {
             }ms">${letter}</span>`;
         })
         .join('');
+});
+
+// -------------------------------------------------------------------- //
+//SECTIONS REVEAL
+const sectionS = document.querySelectorAll('.section');
+const revealSection = function (entries, observer) {
+    const entry = entries[0];
+
+    //safeguard
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('section--hidden');
+    //unobserve after revealing
+    observer.unobserve(entry.target);
+};
+
+const revealObserverOption = {
+    root: null,
+    threshold: 0.2,
+};
+const sectionObserver = new IntersectionObserver(
+    revealSection,
+    revealObserverOption
+);
+sectionS.forEach(section => {
+    sectionObserver.observe(section);
+    section.classList.add('section--hidden');
 });
 
 // -------------------------------------------------------------------- //

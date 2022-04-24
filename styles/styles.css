@@ -52,7 +52,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   width: 100vw;
-  background-color: #000; }
+  background-color: #000;
+  position: relative; }
 
 body {
   font-family: "Lora", serif;
@@ -136,20 +137,12 @@ body {
 
 .explore {
   margin: 0 auto;
-  max-width: 75vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
+  width: 100rem; }
   .explore__box {
-    height: 20vw;
-    margin: 4rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .explore__box--1, .explore__box--4, .explore__box--5, .explore__box--8 {
+    height: 35rem; }
+    .explore__box--text {
       position: relative; }
-      .explore__box--1:after, .explore__box--4:after, .explore__box--5:after, .explore__box--8:after {
+      .explore__box--text:after {
         position: absolute;
         font-size: 4.8rem;
         letter-spacing: 0.2em;
@@ -157,36 +150,26 @@ body {
         transition: opacity 0.8s;
         top: 10%;
         left: 5%; }
-      .explore__box--1:hover::after, .explore__box--4:hover::after, .explore__box--5:hover::after, .explore__box--8:hover::after {
-        opacity: 0.5; }
-    .explore__box--1::after {
-      content: 'enjoy'; }
-    .explore__box--4::after {
-      content: 'take'; }
-    .explore__box--5::after {
-      content: 'experience'; }
-    .explore__box--8::after {
-      content: 'host'; }
-    .explore__box--2 {
-      background-image: url(../../assets/img/place-1.jpg);
-      background-position: left; }
-    .explore__box--3 {
-      background-image: url(../../assets/img/place-2.jpg);
-      align-items: flex-end;
-      background-position: right; }
-    .explore__box--6 {
-      background-image: url(../../assets/img/place-3.jpg);
-      background-position: left; }
-    .explore__box--7 {
-      background-image: url(../../coverage/infrastructure/place-4.jpg);
-      align-items: flex-end;
-      background-position: right; }
+    .explore__box--image {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
   .explore__heading {
-    color: #000;
+    width: fit-content;
     margin: 0 auto 3rem; }
+  .explore__image {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    width: 100%;
+    position: absolute; }
   .explore__summary {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    z-index: 10; }
+    .explore__summary--right {
+      justify-content: right; }
     .explore__summary--text {
       border-radius: 5px;
       padding: 0.5rem 1rem;
@@ -355,6 +338,34 @@ body {
     text-align: center;
     font-style: italic;
     letter-spacing: 0.13em; }
+
+.menu {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  z-index: 1; }
+  .menu__list {
+    list-style-type: none;
+    display: none;
+    text-align: center; }
+  .menu__item:nth-of-type(even) {
+    font-family: "Lora", serif;
+    font-size: 3.6rem; }
+  .menu__item:nth-of-type(odd) {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.8rem; }
+  .menu__item:last-child {
+    font-family: "MonteCarlo", cursive;
+    font-size: 3.6rem; }
+  .menu__link {
+    text-decoration: none;
+    color: #fff;
+    transition: opacity 1.2s;
+    opacity: 0; }
+    .menu__link:hover {
+      color: #ffd700; }
+  .menu--active .menu__list {
+    display: block; }
 
 .news {
   width: 100%;
@@ -601,7 +612,9 @@ body {
   height: 100vh;
   overflow-x: hidden;
   transition: all 0.8s ease-in-out;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 2;
+  scroll-behavior: smooth; }
   .wrapper--inverted {
     transform: translate(25%, 5%) scale(0.9);
     border-radius: 1rem; }
@@ -769,9 +782,10 @@ body {
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 3rem; }
+  column-gap: 3rem; }
+  .row:not(:last-child) {
+    margin-bottom: 3rem; }
   .row .col-1-of-2 {
     width: 45%;
     flex: 1; }
@@ -788,8 +802,13 @@ body {
 .double-row {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   align-items: center; }
+
+.section {
+  transition: opacity 1.2s, transform 1.2s; }
+  .section--hidden {
+    opacity: 0;
+    transform: translateY(10rem); }
 
 .section-header {
   width: 100vw;
@@ -880,7 +899,8 @@ body {
 
 .section-blog {
   padding: 0 6rem;
-  margin: 2rem auto 0; }
+  margin: 2rem auto 0;
+  width: 120rem; }
   .section-blog__heading {
     margin: 3rem 6rem; }
   .section-blog__news {
