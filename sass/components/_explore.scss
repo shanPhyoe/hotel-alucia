@@ -1,25 +1,13 @@
 .explore {
     margin: 0 auto;
-    max-width: 75vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 100rem;
 
     &__box {
-        height: 20vw;
-        margin: 4rem;
-        // border-radius: 5px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        // background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        height: 35rem;
 
-        &--1,
-        &--4,
-        &--5,
-        &--8 {
+        &--text {
             position: relative;
+
             &:after {
                 position: absolute;
                 font-size: $font-size-huge;
@@ -29,63 +17,37 @@
                 top: 10%;
                 left: 5%;
             }
-
-            &:hover {
-                &::after {
-                    opacity: 0.5;
-                }
-            }
         }
 
-        &--1 {
-            &::after {
-                content: 'enjoy';
-            }
-        }
-        &--4 {
-            &::after {
-                content: 'take';
-            }
-        }
-        &--5 {
-            &::after {
-                content: 'experience';
-            }
-        }
-        &--8 {
-            &::after {
-                content: 'host';
-            }
-        }
-
-        &--2 {
-            background-image: url(../../assets/img/place-1.jpg);
-            background-position: left;
-        }
-        &--3 {
-            background-image: url(../../assets/img/place-2.jpg);
-            align-items: flex-end;
-            background-position: right;
-        }
-        &--6 {
-            background-image: url(../../assets/img/place-3.jpg);
-            background-position: left;
-        }
-        &--7 {
-            background-image: url(../../coverage/infrastructure/place-4.jpg);
-            align-items: flex-end;
-            background-position: right;
+        &--image {
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
     &__heading {
-        color: $color-black;
+        width: fit-content;
         margin: 0 auto 3rem;
+    }
+
+    &__image {
+        border-radius: 1.5rem;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
     }
 
     &__summary {
         display: flex;
         align-items: center;
+        z-index: 10;
+
+        &--right {
+            justify-content: right;
+        }
 
         &--text {
             border-radius: 5px;
@@ -120,3 +82,107 @@
         }
     }
 }
+
+// &--1,
+// &--4,
+// &--5,
+// &--8 {
+//     position: relative;
+//     &:after {
+//         position: absolute;
+//         font-size: $font-size-huge;
+//         letter-spacing: 0.2em;
+//         opacity: 0;
+//         transition: opacity 0.8s;
+//         top: 10%;
+//         left: 5%;
+//     }
+
+//     &:hover {
+//         &::after {
+//             opacity: 0.5;
+//         }
+//     }
+
+//     &--1 {
+//         &::after {
+//             content: 'enjoy';
+//         }
+//     }
+//     &--4 {
+//         &::after {
+//             content: 'take';
+//         }
+//     }
+//     &--5 {
+//         &::after {
+//             content: 'experience';
+//         }
+//     }
+//     &--8 {
+//         &::after {
+//             content: 'host';
+//         }
+//     }
+
+//     &--2 {
+//         background-image: url(../../assets/img/place-1.jpg);
+//         background-position: left;
+//     }
+//     &--3 {
+//         background-image: url(../../assets/img/place-2.jpg);
+//         align-items: flex-end;
+//         background-position: right;
+//     }
+//     &--6 {
+//         background-image: url(../../assets/img/place-3.jpg);
+//         background-position: left;
+//     }
+//     &--7 {
+//         background-image: url(../../coverage/infrastructure/place-4.jpg);
+//         align-items: flex-end;
+//         background-position: right;
+//     }
+// }
+
+// &__heading {
+//     color: $color-black;
+//     margin: 0 auto 3rem;
+// }
+
+// &__summary {
+//     display: flex;
+//     align-items: center;
+
+//     &--text {
+//         border-radius: 5px;
+//         padding: 0.5rem 1rem;
+//         color: $color-white;
+//         opacity: 0;
+//         background: linear-gradient(
+//             to right,
+//             transparent 50%,
+//             rgba($color-primary, 0.5) 50%
+//         );
+//         background-size: 200% 100%;
+//         background-position: left;
+//         transition: all 0.8s ease-out;
+//     }
+
+//     &:hover &--text {
+//         opacity: 1;
+//         background-position: right;
+//     }
+
+//     &--icon {
+//         margin: 2rem;
+//         height: 3.6rem;
+//         width: 3.6rem;
+//         fill: $color-white;
+//         transition: fill 0.8s;
+//     }
+
+//     &:hover &--icon {
+//         fill: $color-primary;
+//     }
+// }

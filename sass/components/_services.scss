@@ -22,10 +22,10 @@
         height: 3.6rem;
         fill: $color-primary-light;
         transition: transform 0.8s;
+    }
 
-        &:hover {
-            transform: rotateZ(360deg);
-        }
+    &__icon--active &__icon {
+        transform: rotateZ(360deg);
     }
 
     &__text {

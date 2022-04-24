@@ -3,6 +3,8 @@
     overflow-x: hidden;
     transition: all 0.8s ease-in-out;
     background-color: $color-white;
+    z-index: 2;
+    scroll-behavior: smooth;
 
     &--inverted {
         transform: translate(25%, 5%) scale(0.9);

@@ -1,13 +1,38 @@
 // MENU BUTTON FUNCTIONING
-
 const navigation = document.getElementById('navigation');
+const menu = document.getElementById('menu');
+const menuLink = document.querySelectorAll('.menu__link');
 const wrapper = document.getElementById('wrapper');
 
-navigation.addEventListener('click', function (e) {
-    const menu = e.target.closest('.navigation__menu');
-    if (!menu) return;
+const menuFunctionality = function () {
     navigation.classList.toggle('navigation--inverted');
     wrapper.classList.toggle('wrapper--inverted');
+    menu.classList.toggle('menu--active');
+
+    if (!menu.classList.contains('menu--active')) {
+        menuLink.forEach(link => {
+            link.style.opacity = 0;
+        });
+    } else {
+        menuLink.forEach((link, index) => {
+            setTimeout(() => {
+                link.style.opacity = 1;
+            }, 1000 + index * 400);
+        });
+    }
+};
+
+navigation.addEventListener('click', function (e) {
+    const menuButton = e.target.closest('.navigation__menu');
+    if (!menuButton) return;
+
+    menuFunctionality();
+});
+
+menuLink.forEach(link => {
+    link.addEventListener('click', () => {
+        menuFunctionality();
+    });
 });
 
 // -------------------------------------------------------------------- //
@@ -20,28 +45,47 @@ const layerFour = document.getElementById('layer-4');
 const layerFive = document.getElementById('layer-5');
 const layerSix = document.getElementById('layer-6');
 
+// percentage of value calculated
+const parallaxMultiplierOne = 0.01;
+const parallaxMultiplierTwo = 0.02;
+const parallaxMultiplierThree = 0.04;
+
 header.addEventListener('mousemove', function (e) {
     const pageX = e.clientX - window.innerWidth / 2;
     const pageY = e.clientY - window.innerHeight / 2;
 
-    layerOne.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
-    layerTwo.style.transform = `translate(${20 - pageX * 0.01}%, ${
-        20 - pageY * 0.01
-    }%)`;
-    layerThree.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
-    layerFour.style.transform = `translate(${20 - pageX * 0.02}%, ${
-        20 - pageY * 0.02
-    }%)`;
-    layerFive.style.transform = `translate(${20 - pageX * 0.02}%, ${
-        20 - pageY * 0.02
-    }%)`;
-    layerSix.style.transform = `translate(${20 - pageX * 0.04}%, ${
-        20 - pageY * 0.04
-    }%)`;
+    layerOne.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+
+    layerTwo.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierOne
+    }%, ${20 - pageY * parallaxMultiplierOne}%)`;
+
+    layerThree.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+
+    layerFour.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierTwo
+    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+
+    layerFive.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierTwo
+    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+
+    layerSix.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierThree
+    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
+});
+
+// -------------------------------------------------------------------- //
+// HEADING BUTTON SCROLLING
+const headerButton = document.getElementById('header-button');
+const rooms = document.getElementById('rooms');
+
+headerButton.addEventListener('click', function () {
+    rooms.scrollIntoView({ behavior: 'smooth' });
 });
 
 // -------------------------------------------------------------------- //
@@ -79,7 +123,8 @@ const sectionAboutObserver = new IntersectionObserver(imageParallax, obsOption);
 sectionAboutObserver.observe(sectionAbout);
 
 // -------------------------------------------------------------------- //
-// adding active class to only one certain element of same elements type
+// helper function
+// adding active class to only one certain element of same elements type depending on index
 const setActiveElement = function (index, elementClassName, delay = 0) {
     const elements = document.querySelectorAll(`.${elementClassName}`);
 
@@ -142,13 +187,6 @@ dotsContainer.addEventListener('click', e => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-    createDots();
-    setActiveElement(currentSlide, 'dots__dot');
-    setActiveElement(currentSlide, 'slide');
-});
-
 // -------------------------------------------------------------------- //
 // FEATURE BOXES FUNCTIONALITY
 const featuredImgBoxes = document.querySelectorAll('.feature-box__images-box');
@@ -189,6 +227,21 @@ featuredLabels.forEach(label => {
 });
 
 // -------------------------------------------------------------------- //
+// ICON ANIMATION
+const servicesIconBoxes = document.querySelectorAll('.services__content');
+
+servicesIconBoxes.forEach(box => {
+    box.addEventListener('mouseenter', function () {
+        box.classList.add('services__icon--active');
+
+        // 800ms is rotate-transition
+        setTimeout(() => {
+            box.classList.remove('services__icon--active');
+        }, 800);
+    });
+});
+
+// -------------------------------------------------------------------- //
 // FORM LABEL WAVE ANIMATION
 const formLabels = document.querySelectorAll('.form__label');
 
@@ -204,20 +257,44 @@ formLabels.forEach(label => {
 });
 
 // -------------------------------------------------------------------- //
-// FOOTER SLIDEUP
-// const sectionBlog = document.querySelector('.section-blog');
-// const footer = document.querySelector('.footer');
+//SECTIONS REVEAL
+const sectionS = document.querySelectorAll('.section');
+const revealSection = function (entries, observer) {
+    const entry = entries[0];
 
-// const footerReveal = function (entries) {
-//     const [entry] = entries;
+    //safeguard
+    if (!entry.isIntersecting) return;
 
-//     if (entry.isIntersecting) {
-//         console.log('intersecting');
-//         footer.style.visibility = 'visible';
-//     } else {
-//         footer.style.visibility = 'hidden';
-//     }
-// };
+    entry.target.classList.remove('section--hidden');
+    //unobserve after revealing
+    observer.unobserve(entry.target);
+};
 
-// const sectionBlogObserver = new IntersectionObserver(footerReveal, obsOption);
-// sectionBlogObserver.observe(sectionBlog);
+const revealObserverOption = {
+    root: null,
+    threshold: 0.2,
+};
+const sectionObserver = new IntersectionObserver(
+    revealSection,
+    revealObserverOption
+);
+sectionS.forEach(section => {
+    sectionObserver.observe(section);
+    section.classList.add('section--hidden');
+});
+
+// -------------------------------------------------------------------- //
+
+window.addEventListener('DOMContentLoaded', () => {
+    // console.log('DOM fully loaded');
+
+    createDots();
+    setActiveElement(currentSlide, 'dots__dot');
+    setActiveElement(currentSlide, 'slide');
+
+    setActiveElement(currentFeaturedBox, 'feature-box__images-box');
+    setActiveElement(currentFeaturedBox, 'feature-box__label');
+    setActiveElement(currentFeaturedBox, 'feature-box__text-box');
+});
+
+// -------------------------------------------------------------------- //
