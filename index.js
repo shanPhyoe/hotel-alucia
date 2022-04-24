@@ -20,7 +20,7 @@ const layerFour = document.getElementById('layer-4');
 const layerFive = document.getElementById('layer-5');
 const layerSix = document.getElementById('layer-6');
 
-// the smaller the multiplier, the smaller distance the element will move
+// percentage of value calculated
 const parallaxMultiplierOne = 0.01;
 const parallaxMultiplierTwo = 0.02;
 const parallaxMultiplierThree = 0.04;
@@ -89,7 +89,8 @@ const sectionAboutObserver = new IntersectionObserver(imageParallax, obsOption);
 sectionAboutObserver.observe(sectionAbout);
 
 // -------------------------------------------------------------------- //
-// adding active class to only one certain element of same elements type
+// helper function
+// adding active class to only one certain element of same elements type depending on index
 const setActiveElement = function (index, elementClassName, delay = 0) {
     const elements = document.querySelectorAll(`.${elementClassName}`);
 
@@ -152,13 +153,6 @@ dotsContainer.addEventListener('click', e => {
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-    createDots();
-    setActiveElement(currentSlide, 'dots__dot');
-    setActiveElement(currentSlide, 'slide');
-});
-
 // -------------------------------------------------------------------- //
 // FEATURE BOXES FUNCTIONALITY
 const featuredImgBoxes = document.querySelectorAll('.feature-box__images-box');
@@ -199,6 +193,21 @@ featuredLabels.forEach(label => {
 });
 
 // -------------------------------------------------------------------- //
+// ICON ANIMATION
+const servicesIconBoxes = document.querySelectorAll('.services__content');
+
+servicesIconBoxes.forEach(box => {
+    box.addEventListener('mouseenter', function () {
+        box.classList.add('services__icon--active');
+
+        // 800ms is rotate-transition
+        setTimeout(() => {
+            box.classList.remove('services__icon--active');
+        }, 800);
+    });
+});
+
+// -------------------------------------------------------------------- //
 // FORM LABEL WAVE ANIMATION
 const formLabels = document.querySelectorAll('.form__label');
 
@@ -212,3 +221,19 @@ formLabels.forEach(label => {
         })
         .join('');
 });
+
+// -------------------------------------------------------------------- //
+
+window.addEventListener('DOMContentLoaded', () => {
+    // console.log('DOM fully loaded');
+
+    createDots();
+    setActiveElement(currentSlide, 'dots__dot');
+    setActiveElement(currentSlide, 'slide');
+
+    setActiveElement(currentFeaturedBox, 'feature-box__images-box');
+    setActiveElement(currentFeaturedBox, 'feature-box__label');
+    setActiveElement(currentFeaturedBox, 'feature-box__text-box');
+});
+
+// -------------------------------------------------------------------- //

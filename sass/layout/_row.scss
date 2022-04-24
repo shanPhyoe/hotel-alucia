@@ -1,18 +1,19 @@
 .row {
-    width: 120rem;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    // justify-content: space-between;
     gap: 3rem;
 
     .col-1-of-2 {
         width: 45%;
+        flex: 1;
     }
 
     .col-1-of-3 {
         width: 30%;
+        flex: 1;
         min-height: 30rem;
         display: flex;
         flex-direction: column;
@@ -20,4 +21,11 @@
         align-items: center;
         position: relative;
     }
+}
+
+.double-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
 }

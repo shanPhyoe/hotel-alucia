@@ -1,51 +1,94 @@
-.rooms {
-    max-width: 80vw;
-    margin: 0 auto;
+.room {
+    display: inline-block;
     position: relative;
-    height: fit-content;
+    transition: transform 0.8s;
+    overflow: hidden;
 
-    &__room {
-        position: relative;
+    //test
+    // border: 1px solid black;
 
-        &:not(:last-child) {
-            margin-bottom: 18rem;
+    &--small {
+        height: 38rem;
+        border-radius: 1.5rem;
+    }
+
+    &--medium {
+        height: 49rem;
+    }
+
+    &--large {
+        height: 60rem;
+        border-radius: 3rem;
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: contain;
+        transition: transform 3s ease-out;
+    }
+
+    &__image-wrapper {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+
+        &--main {
+            width: 80%;
+            transition: transform 3s ease-out;
         }
 
-        & img {
-            transition: transform 0.8s ease-out;
-
-            &:hover {
-                transform: translateY(-1rem);
-            }
-        }
-
-        &--image-1 {
-            width: 55vw;
-            border-radius: 0 4.5rem 0 4.5rem;
-        }
-
-        &--image-2 {
-            width: 28vw;
-            border-radius: 4.5rem 0 4.5rem 0;
+        &--sub {
+            width: 30%;
+            transition: transform 2s ease-in;
+            border-radius: 1.5rem;
             position: absolute;
-            bottom: -10%;
+            top: 50%;
+            left: 50%;
+            transition-delay: 0.8s;
+        }
+
+        //test
+        // border: 1px solid black;
+    }
+
+    &__text {
+        // text-decoration: none;
+        transition: all 0.8s ease-out;
+        position: absolute;
+
+        &--pos1 {
+            bottom: 10%;
+            left: 10%;
+        }
+
+        &--pos2 {
+            bottom: 10%;
+            right: 10%;
+        }
+
+        &--pos3 {
+            transform-origin: center;
+            transform: translateX(-50%);
+            bottom: 15%;
             left: 50%;
         }
 
-        &--text {
-            padding: 0;
-            position: absolute;
-            top: 30%;
-            right: 0%;
-            transition: letter-spacing 0.8s ease-out;
-
-            &:hover {
-                letter-spacing: 0.5rem;
-            }
+        &--pos4 {
+            top: 20%;
+            right: 10%;
         }
+    }
 
-        & img:hover ~ &--text {
-            letter-spacing: 0.5rem;
-        }
+    &:hover &__text {
+        font-size: $font-size-s-large;
+        letter-spacing: 0.5rem;
+    }
+
+    &:hover &__image {
+        transform: scale(1.2);
+    }
+
+    &:hover &__image-wrapper > * {
+        transform: translateY(-2rem);
     }
 }

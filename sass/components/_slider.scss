@@ -1,24 +1,18 @@
 .slider {
-    width: calc(100vw - 12rem);
     position: relative;
+    width: fit-content;
+    margin: 0 auto;
 
     & .slide {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        width: 120rem;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.4s ease-in;
 
-        &--1,
+        &--2,
         &--3 {
             position: absolute;
             top: 6rem;
-        }
-
-        // to take the height of the highest element on parent(slide--2 is the highest element)
-        &--2 {
-            position: relative;
         }
 
         &--active {
@@ -61,7 +55,7 @@
 
     & .dots {
         margin: 0 auto 3rem;
-        width: 10rem;
+        width: fit-content;
         height: 3rem;
         display: flex;
         align-items: center;

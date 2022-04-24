@@ -6,13 +6,12 @@
 .section-about {
     height: 100vh;
     padding: 0 6rem;
+    margin-bottom: 6rem;
 
     & .row {
-        width: 100%;
         height: 100%;
 
         & .col-1-of-3 {
-            flex: 1;
             height: 90%;
         }
     }
@@ -30,7 +29,7 @@
         position: absolute;
         border-radius: 1.5rem;
         transform: translate3d(0, 0, 0);
-        transition: transform 0.8s ease-out;
+        transition: transform 1s ease-out;
         object-fit: cover;
 
         &--1 {
@@ -50,13 +49,14 @@
             right: 30%;
             bottom: 0%;
             box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
-            transition: transform 1s ease-out;
+            transition: transform 1.2s ease-out;
         }
     }
 }
 
 .section-rooms {
     padding: 0rem 6rem;
+    margin-bottom: 6rem;
 
     &__heading {
         margin: 0 6rem 3rem;
@@ -65,7 +65,7 @@
 
 .section-feature {
     margin-top: 6rem;
-    padding: 0 6rem;
+    padding: 6rem;
     overflow: hidden;
 
     &__heading {
@@ -76,11 +76,11 @@
 }
 
 .section-services {
-    margin: 6rem;
+    margin: 12rem 0 6rem;
 
     &__heading {
         width: fit-content;
-        margin: 12rem auto;
+        margin: 0 auto 6rem;
     }
 }
 

@@ -109,57 +109,70 @@
                 </div>
             </section>
             <section class="section-rooms">
-                <h2 class="heading-secondary section-rooms__heading">
-                    <div class="heading-secondary--main">Rooms & Suites</div>
-                    <div class="heading-secondary--sub">Join us... Be our guest and make every stay memorable.</div>
-                </h2>
+                <div class="section-rooms__heading">
+                    <h2 class="heading-secondary">
+                        <div class="heading-secondary--main">Rooms & Suites</div>
+                        <div class="heading-secondary--sub">Join us... Be our guest and make every stay memorable.</div>
+                    </h2>
+                </div>
                 <div class="slider">
                     <div class="dots"></div>
                     <div class="slide slide--1">
-                        <div class="grid">
-                            <a href="#" class="grid__small grid__small--1">
-                                <span class="btn btn--grid">Deluxe Double</span>
-                            </a>
-                            <a href="#" class="grid__small grid__small--2">
-                                <span class="btn btn--grid">Standard Double</span>
-                            </a>
-                            <a href="#" class="grid__large">
-                                <span class="btn btn--grid">Private Double</span>
-                            </a>
-                        </div>
-                    </div>                    
-                    <div class="slide slide--2">
-                        <div class="rooms">
-                            <div class="rooms__room">
-                                <a href="#">
-                                    <img src="/assets/img/duplex-suite1.jpg" alt="duplex suite 1"  class="rooms__room--image-1">
-                                    <img src="/assets/img/duplex-suite2.jpg" alt="duplex suite 2"  class="rooms__room--image-2">
-                                    <span class="btn btn--default rooms__room--text">Duplex Suite</span>
+                        <div class="double-row">
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <a href="#" class="room room--small">
+                                        <img src="./assets/img/deluxe-double.jpg" alt="deluxe double room" class="room__image">
+                                        <div class="btn btn--inverted room__text room__text--pos1">Deluxe Double</div>
+                                    </a>
+                                </div>
+                                <div class="col-1-of-2">
+                                    <a href="#" class="room room--small">
+                                        <img src="./assets/img/standard-double.jpg" alt="standard double room" class="room__image">
+                                        <div class="btn btn--inverted room__text room__text--pos2">Standard Double</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="room room--large">
+                                    <img src="./assets/img/private-double.jpg" alt="standard double room" class="room__image">
+                                    <div class="btn btn--inverted room__text room__text--pos3">Private Double</div>
                                 </a>
                             </div>
-                            <div class="rooms__room">
-                                <a href="#">
-                                    <img src="/assets/img/junior-suite1.jpg" alt="junior suite 1"  class="rooms__room--image-1">
-                                    <img src="/assets/img/junior-suite2.jpg" alt="junior suite 2"  class="rooms__room--image-2">
-                                    <span class="btn btn--default rooms__room--text">Junior Suite</span>
-                                </a>
-                            </div>                            
+                        </div>                        
+                    </div>                    
+                    <div class="slide slide--2">
+                        <div class="double-row">
+                            <a href="#" class="room room--medium">
+                                <div class="room__image-wrapper">
+                                    <img src="./assets/img/duplex-suite1.jpg" alt="duplex suite" class="room__image-wrapper--main">
+                                    <img src="./assets/img/duplex-suite2.jpg" alt="duplex suite" class="room__image-wrapper--sub">
+                                </div>
+                                <div class="btn btn--default room__text room__text--pos4">Duplex Suite</div>
+                            </a>
+                            <a href="#" class="room room--medium">
+                                <div class="room__image-wrapper">
+                                    <img src="./assets/img/junior-suite1.jpg" alt="junior suite" class="room__image-wrapper--main">
+                                    <img src="./assets/img/junior-suite2.jpg" alt="junior suite" class="room__image-wrapper--sub">
+                                </div>
+                                <div class="btn btn--default room__text room__text--pos4">Junior Suite</div>
+                            </a>
                         </div>
                     </div>
                     <div class="slide slide--3">
-                        <div class="rooms">
-                            <div class="rooms__room">
-                                <a href="#">
-                                    <img src="/assets/img/deluxe-single.jpg" alt="deluxe single"  class="rooms__room--image-1 u-margin-left-medium">
-                                    <span class="btn btn--default rooms__room--text u-margin-right-medium">Deluxe Single</span>
-                                </a>
-                            </div>
-                            <div class="rooms__room">
-                                <a href="#">
-                                    <img src="/assets/img/standard-single.jpg" alt="standard single"  class="rooms__room--image-1 u-margin-left-medium">
-                                    <span class="btn btn--default rooms__room--text u-margin-right-medium">Standard Single</span>
-                                </a>
-                            </div>                            
+                        <div class="double-row">
+                            <a href="#" class="room room--medium">
+                                <div class="room__image-wrapper">
+                                    <img src="./assets/img/deluxe-single.jpg" alt="deluxe single" class="room__image-wrapper--main">
+                                </div>
+                                <div class="btn btn--default room__text room__text--pos4">Deluxe Single</div>
+                            </a>
+                            <a href="#" class="room room--medium">
+                                <div class="room__image-wrapper">
+                                    <img src="./assets/img/standard-single.jpg" alt="standard single" class="room__image-wrapper--main">
+                                </div>
+                                <div class="btn btn--default room__text room__text--pos4">Standard Single</div>
+                            </a>
                         </div>
                     </div>
                     <button class="slider__btn slider__btn--left">&ltcc;</button>
@@ -174,7 +187,7 @@
                 </div>
                 <div class="feature-box">
                     <div class="feature-box__images-container">
-                        <div class="feature-box__images-box feature-box__images-box--active feature-box__images-box--1">
+                        <div class="feature-box__images-box feature-box__images-box--1">
                             <img src="/assets/img/res-1.jpg" alt="hotel indoor restaurant" class="feature-box__images feature-box__images--1">
                             <img src="/assets/img/res-2.jpg" alt="hotel outdoor restaurant"class="feature-box__images feature-box__images--2">
                         </div>
@@ -192,13 +205,13 @@
                         </div>
                     </div>                            
                     <div class="feature-box__labels-container">
-                        <div class="feature-box__label feature-box__label--active" data-key="0">the Restaurant</div>
+                        <div class="feature-box__label" data-key="0">the Restaurant</div>
                         <div class="feature-box__label" data-key="1">in Room Dining</div>
                         <div class="feature-box__label" data-key="2">roof top Bar</div>
                         <div class="feature-box__label" data-key="3">poolside Bar</div>
                     </div>
                     <div class="feature-box__text-container">
-                        <div class="feature-box__text-box feature-box__text-box--active feature-box__text-box--1">
+                        <div class="feature-box__text-box feature-box__text-box--1">
                             <p class="paragraph">Founding beside the lovely sea, sits our Fine Dining Restaurant, known for its excellent services and unique view.</p>
                             <p class="paragraph">We offers our valuable guests unique genuine delicious meals, assured creating unforgettable dining experience with your loves ones.</p>
                             <p class="paragraph">The creation of our top-tier chefs will never bore you with always different and delicious dishes, as well as our daily Tasting Menu in the evening.</p>
