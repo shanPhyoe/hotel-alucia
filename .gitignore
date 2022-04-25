@@ -2,4 +2,7 @@
 
 # testing
 /coverage
+/dist
+/build
 
+.gitignore
