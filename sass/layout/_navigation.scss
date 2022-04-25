@@ -10,11 +10,23 @@
     z-index: 9999;
     font-family: $font-family-alt;
 
+    @media screen and (max-width: 480px) {
+        height: 6rem;
+    }
+
     &__menu {
         margin-left: 6rem;
         display: flex;
         align-items: center;
         cursor: pointer;
+
+        @media screen and (max-width: 480px) {
+            margin-left: 3rem;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-left: 1rem;
+        }
 
         &--icon {
             position: relative;
@@ -52,6 +64,14 @@
         &--text {
             font-size: $font-size-small;
             margin-right: 2rem;
+
+            @media screen and (max-width: 480px) {
+                margin-right: 1rem;
+            }
+
+            @media screen and (max-width: 375px) {
+                margin-right: 0.5rem;
+            }
         }
     }
 
@@ -86,9 +106,17 @@
 
     &__button {
         margin-right: 6rem;
-        padding-right: 0 !important;
+        padding: 0 !important;
         transition: color 0.8s ease-in-out, transform 0.8s ease-in-out;
         background-color: transparent;
+
+        @media screen and (max-width: 480px) {
+            margin-right: 3rem;
+        }
+
+        @media screen and (max-width: 375px) {
+            margin-right: 1rem;
+        }
 
         &:hover {
             transform: scale(1.05);

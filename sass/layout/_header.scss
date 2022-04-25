@@ -12,16 +12,18 @@
     background-repeat: no-repeat;
     position: relative;
 
-    @media only screen and (min-resolution: 192dpi),
-        only screen and (min-width: 1440px),
-        only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (min-width: 720px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-width: 1440px),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px) {
         background-image: linear-gradient(
                 to right,
                 rgba($color-primary, 0.2),
                 rgba($color-primary-light, 0.2)
             ),
-            url(../../assets/img/hotel-overview.jpg);
+            url(../../assets/img/hotel-overview-large.jpg);
+    }
+
+    @media screen and (max-width: 375px) {
+        height: calc(50rem);
     }
 
     &__text-box {

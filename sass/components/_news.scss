@@ -6,6 +6,10 @@
     transition: 0.8s;
     overflow: hidden;
 
+    @media screen and (max-width: 480px) {
+        width: 25rem;
+    }
+
     &__date {
         color: $color-white;
         width: 3.5rem;
@@ -35,6 +39,10 @@
         width: 100%;
         object-fit: cover;
         transition: transform 1.8s ease-out;
+
+        @media screen and (max-width: 1024px) {
+            height: 35rem;
+        }
     }
 
     &__title {
@@ -46,6 +54,12 @@
         position: absolute;
         left: 20%;
         top: 75%;
+
+        @media screen and (max-width: 1024px) {
+            top: 60%;
+            left: 15%;
+            width: 80%;
+        }
     }
 
     &:hover &__image {

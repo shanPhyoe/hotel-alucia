@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="/styles/styles.css" />
         <script defer src="/index.js"></script>
         <script defer src="/svgxuse.js"></script>
+        <link rel="icon" type="image/x-icon" href="./logo.png">
         <title>Alutia | Deluxe Stay in Bali</title>
     </head>
     <body>
@@ -27,12 +28,12 @@
         </nav>
         <nav class="menu" id="menu">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-                    <li class="menu__item"><a href="#rooms" class="menu__link">Rooms & Suites</a></li>
-                    <li class="menu__item"><a href="#feature" class="menu__link">Restaurant & Bars</a></li>
-                    <li class="menu__item"><a href="#explore" class="menu__link">Explore</a></li>
-                    <li class="menu__item"><a href="#blog" class="menu__link">Our News</a></li>
-                    <li class="menu__item"><a href="#book" class="menu__link">Book Now</a></li>
+                    <li class="menu__item"><p data-link="about" class="menu__link">About</p></li>
+                    <li class="menu__item"><p data-link="rooms" class="menu__link">Rooms & Suites</p></li>
+                    <li class="menu__item"><p data-link="feature" class="menu__link">Restaurant & Bars</p></li>
+                    <li class="menu__item"><p data-link="explore" class="menu__link">Explore</p></li>
+                    <li class="menu__item"><p data-link="blog" class="menu__link">Our News</p></li>
+                    <li class="menu__item"><p data-link="book" class="menu__link">Book Now</p></li>
                 </ul>
         </nav>
         <main class="wrapper" id="wrapper">  
@@ -59,9 +60,7 @@
                 </header>
             </section>
             <section class="section section-about" id="about">
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="title">
+                        <div class="title section-about__title">
                             <div class="title__main">Hotel Alucia</div>
                             <div class="title__sub">LUXURY HOTEL</div>
                             <div class="title__rating">
@@ -82,7 +81,6 @@
                                 </svg>
                             </div>
                         </div>
-                        <img src="/assets/img/lobby.jpg" alt="hotel lobby" class="section-about__image section-about__image--1" id="parallax-img-1">
                         <div class="info-card">
                             <div class="info-card--main">
                                 <svg class="icon">
@@ -96,24 +94,22 @@
                             <div class="info-card--sub">And it's toll-free!</div>
                         </div>
                     </div>
-                    <div class="col-1-of-3">                     
+                    <img src="/assets/img/lobby.jpg" alt="hotel lobby" class="section-about__image section-about__image--1" id="parallax-img-1">
+                    <img src="/assets/img/entrance.jpg" alt="hotel entrance" class="section-about__image section-about__image--2" id="parallax-img-2">
+                    <img src="/assets/img/garden.jpg" alt="hotel garden" class="section-about__image section-about__image--3" id="parallax-img-3">
                         <div class="section-about__content">
-                            <h2 class="heading-secondary section-about__heading">
-                                <div class="heading-secondary--main">Enjoy a Luxury Experience</div>
-                                <div class="heading-secondary--sub">Our's guests' satisfaction is our first priority.</div>
-                            </h2>
+                            <div class="section-about__heading">
+                                <h2 class="heading-secondary">
+                                    <div class="heading-secondary--main">Enjoy a Luxury Experience</div>
+                                    <div class="heading-secondary--sub">Our's guests' satisfaction is our first priority.</div>
+                                </h2>
+                            </div>
                             <div class="section-about__text">
                                 <p class="paragraph">Welcome to the best five-star deluxe hotel in Bali.</p>
                                 <p class="paragraph">We offers a truly exquisite experience as a premium ocean view hotel.</p>
                                 <p class="paragraph">Designed in the style of a sumptuous shelter, over hundred rooms with personalized ocean view, added on by our foremost kitchen and flawless services...</p>
                             </div>
-                        </div>                        
-                        
-                    </div>
-                    <div class="col-1-of-3">
-                        <img src="/assets/img/entrance.jpg" alt="hotel entrance" class="section-about__image section-about__image--2" id="parallax-img-2">
-                        <img src="/assets/img/garden.jpg" alt="hotel garden" class="section-about__image section-about__image--3" id="parallax-img-3">
-                    </div>
+                        </div>
                 </div>
             </section>
             <section class="section section-rooms" id="rooms">
@@ -171,15 +167,15 @@
                         <div class="double-row">
                             <a href="#" class="room room--medium">
                                 <div class="room__image-wrapper">
-                                    <img src="./assets/img/deluxe-single.jpg" alt="deluxe single" class="room__image-wrapper--main">
+                                    <img src="./assets/img/deluxe-single.jpg" alt="deluxe single" class="room__image">
                                 </div>
-                                <div class="btn btn--default room__text room__text--pos4">Deluxe Single</div>
+                                <div class="btn btn--inverted room__text room__text--pos4">Deluxe Single</div>
                             </a>
                             <a href="#" class="room room--medium">
                                 <div class="room__image-wrapper">
-                                    <img src="./assets/img/standard-single.jpg" alt="standard single" class="room__image-wrapper--main">
+                                    <img src="./assets/img/standard-single.jpg" alt="standard single" class="room__image">
                                 </div>
-                                <div class="btn btn--default room__text room__text--pos4">Standard Single</div>
+                                <div class="btn btn--inverted room__text room__text--pos4">Standard Single</div>
                             </a>
                         </div>
                     </div>
@@ -227,17 +223,17 @@
                         </div>
                         <div class="feature-box__text-box feature-box__text-box--2">
                             <p class="paragraph">Whether you would like to enjoy a quiet private time, or to experience a romantic meal in your stay,</p>
-                            <p class="paragraph">Everything on our Restaurant menu can be delivered to be enjoyed at the privacy of your room</p>
+                            <p class="paragraph">everything on our Restaurant menu can be delivered to be enjoyed at the privacy of your room.</p>
                         </div>
                         <div class="feature-box__text-box feature-box__text-box--3">
                             <p class="paragraph">Open daily from 9 a.m to 2 a.m, our bars offers a multitude of beverages.</p>
                             <p class="paragraph">Ranging from hot chocolate to personalized cocktail by our Masters of Mixology, a variety of snacks are also available.</p>
-                            <p class="paragraph">There is no better way to round off your day than by feeling the ocean breeze on evening, drinking your favourite liquor.</p>
+                            <p class="paragraph">There is no better way to round off your day than by feeling the ocean breeze on evening, drinking your favourite liquor on our roof top.</p>
                         </div>
                         <div class="feature-box__text-box feature-box__text-box--4">
                             <p class="paragraph">Poolside bar, opened from 8 a.m to 7 p.m everyday, serves no less than our roof top bar.</p>
                             <p class="paragraph">You can even order our drinks while enjoying the pool with your family.</p>
-                            <p class="paragraph">For your safety our expert lifeguards will always be attentive whether you came here for the pool or the view.</p>
+                            <p class="paragraph">Our expert attentive lifeguards will always be there in case you need them in this area.</p>
                         </div>
                     </div>
                 </div>
@@ -445,13 +441,13 @@
                             <svg class="services__icon">
                                 <use xlink:href="/assets/icons/sprite.svg#icon-spa"></use>
                             </svg>
-                            <div class="services__text">Relaxant Spa</div> 
+                            <div class="services__text">Relaxing Spa</div> 
                         </div>
                         <div class="services__content">                             
                             <svg class="services__icon">
                                 <use xlink:href="/assets/icons/sprite.svg#icon-pool"></use>
                             </svg>
-                            <div class="services__text">Wide Pool</div> 
+                            <div class="services__text">Wide Pools</div> 
                         </div>
                         <div class="services__content">                             
                             <svg class="services__icon">
@@ -501,13 +497,13 @@
                                     <div class="heading-tertiary">Clear Pools</div>
                                 </div>
                                 <p class="paragraph">
-                                    Our hotel offers lovely pools of various size. Either for long lap swimming or enjoying a spot to cool off on cushioned lounge chairs, or both, the choice is yours.
+                                    Our hotel offers lovely pools of various size. Either for long lap swimming or enjoying a spot to cool off on cushioned lounge chairs, or both, our pools here for you.
                                </p>
                                <p class="paragraph">
-                                   With gorgeous designs and luxurious features, a stairway to paradise is the best phrase to describe our main pool, supplemented by the smell of sea breeze. 
+                                   With gorgeous designs and luxurious features, a stairway to paradise is the best way to describe our main pool, supplemented by the smell of sea breeze. 
                                 </p>
                                <p class="paragraph">
-                                   Soothing sea breeze with lush garden, the promise of relaxation, always attracts our guests to refresh their body and mind.
+                                   Soothing sea breeze with lush garden, the promise of relaxation, always attracts our guests to refresh their mind and body.
                                </p>
                             </div>
                         </div>
@@ -536,7 +532,7 @@
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-wind"></use>
                                     </svg>
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Soothing sea breezes.</span>
                                 </div>
                             </div>
                         </div>
@@ -547,25 +543,25 @@
                             <div class="explore__box explore__box--image">
                                 <img src="./assets/img/place-2.jpg" alt="excursion speed boat" class="explore__image">
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Refreshing your mind and body.</span>
+                                    <span class="explore__summary--text">Customized plans to your preferences.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-layers-triple"></use>
                                     </svg>
                                 </div>
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Cushioned lounges.</span>
+                                    <span class="explore__summary--text">Private picnic boat available.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-sail-boat"></use>
                                     </svg>
                                 </div>                                
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Adorable islands nearby.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-island"></use>
                                     </svg>
                                 </div>
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Exciting snorkel.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-snorkel"></use>
                                     </svg>
@@ -573,7 +569,7 @@
                             </div>
                         </div>
                         <div class="col-1-of-2">
-                            <div class="explore__box explore__box--textexplore__box--text-1">
+                            <div class="explore__box explore__box--text explore__box--text-1">
                                 <div class="explore__heading">
                                     <div class="heading-tertiary">Excursions</div>
                                 </div>
@@ -584,7 +580,7 @@
                                         We facilitate sunset cruises and private picnic which altogether with your partner or family will be a beautiful memory in your lifetime.
                                     </p>
                                     <p class="paragraph">
-                                        We arrange your romantic water sport of canoeing and excite adventure of snorkeling as well.
+                                        We arrange your romantic water sport of canoeing and exciting adventure of snorkeling as well.
                                     </p>
                             </div>
                         </div>
@@ -597,7 +593,7 @@
                                     <div class="heading-tertiary">Spa and Wellness</div>
                                 </div>
                                     <p class="paragraph">
-                                        The ultimate healing therapies of our expert therapists, the Wellness Floor of Alucia serces.
+                                        The ultimate healing therapies of our expert therapists, the Wellness Floor of Alucia serves.
                                     </p>
                                     <p class="paragraph">
                                         We use varieties of world-class products to improve our desirable caress and comfortable treatments, which will encourage your overall well-being.
@@ -614,25 +610,25 @@
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-music-note"></use>
                                     </svg>
-                                    <span class="explore__summary--text">Refreshing your mind and body.</span>
+                                    <span class="explore__summary--text">Relaxing resonance for your mood.</span>
                                 </div>
                                 <div class="explore__summary">
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-relieved-face"></use>
                                     </svg>
-                                    <span class="explore__summary--text">Cushioned lounges.</span>
+                                    <span class="explore__summary--text">Desirable pleasure.</span>
                                 </div>
                                 <div class="explore__summary">
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-target"></use>
                                     </svg>
-                                    <span class="explore__summary--text">Lush garden beside!</span>                                
+                                    <span class="explore__summary--text">Effective therapies.<span>                                
                                 </div>
                                 <div class="explore__summary">
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-heart-pulse"></use>
                                     </svg>
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Enhance your overall health.</span>
                                 </div>
                             </div>
                         </div>
@@ -643,25 +639,25 @@
                             <div class="explore__box explore__box--image">
                                 <img src="./assets/img/place-4.jpg" alt="a beautiful sea-view wedding ceremony" class="explore__image">
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Cushioned lounges.</span>
+                                    <span class="explore__summary--text">Various locations to choose.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-layers-triple"></use>
                                     </svg>
                                 </div>
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Lush garden beside!</span>                                
+                                    <span class="explore__summary--text">World-ranked catering.</span>                                
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-catering"></use>
                                     </svg>
                                 </div>
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Tailor your romantic wedding.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-wedding"></use>
                                     </svg>
                                 </div>
                                 <div class="explore__summary explore__summary--right">
-                                    <span class="explore__summary--text">Soothing sea breezes</span>
+                                    <span class="explore__summary--text">Tours to nearby islands as wedding gift.</span>
                                     <svg class="explore__summary--icon">
                                         <use xlink:href="/assets/icons/sprite.svg#icon-island"></use>
                                     </svg>
@@ -674,10 +670,10 @@
                                     <div class="heading-tertiary">Your Social Meetings</div>
                                 </div>
                                     <p class="paragraph">
-                                        Host a Family Party! The special celebration let you strengthen bonds with those your hold...
+                                        Host a Family Party! The special celebrations let you strengthen the bonds with those you hold...
                                     </p>
                                     <p class="paragraph">
-                                        We are pleased to offer our elegant outdoot venues or excellent ballrooms with expert planners to celebrate your specialdays.
+                                        We are pleased to offer our elegant outdoor venues or excellent ballrooms with expert planners to celebrate your special days.
                                     </p>
                                     <p class="paragraph">
                                         From a simple dinner to the joyous day and all the important milestones in between, Alucia can handle any...
@@ -686,84 +682,8 @@
                         </div>
                     </div>
                 </div>
-
-                                    <!-- <div class="explore"> -->
-
-
-
-                    <!-- 
-                    
-                    
-                    
-                    <div class="explore__box explore__box--6">
-                        <div class="explore__summary">
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-music-note"></use>
-                            </svg>
-                            <span class="explore__summary--text">Refreshing your mind and body.</span>
-                        </div>
-                        <div class="explore__summary">
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-relieved-face"></use>
-                            </svg>
-                            <span class="explore__summary--text">Cushioned lounges.</span>
-                        </div>
-                        <div class="explore__summary">
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-target"></use>
-                            </svg>
-                            <span class="explore__summary--text">Lush garden beside!</span>                                
-                        </div>
-                        <div class="explore__summary">
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-heart-pulse"></use>
-                            </svg>
-                            <span class="explore__summary--text">Soothing sea breezes</span>
-                        </div>
-                    </div>
-                    <div class="explore__box explore__box--7">
-                        <div class="explore__summary">
-                            <span class="explore__summary--text">Cushioned lounges.</span>
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-layers-triple"></use>
-                            </svg>
-                        </div>
-                        <div class="explore__summary">
-                            <span class="explore__summary--text">Lush garden beside!</span>                                
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-catering"></use>
-                            </svg>
-                        </div>
-                        <div class="explore__summary">
-                            <span class="explore__summary--text">Soothing sea breezes</span>
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-wedding"></use>
-                            </svg>
-                        </div>
-                        <div class="explore__summary">
-                            <span class="explore__summary--text">Soothing sea breezes</span>
-                            <svg class="explore__summary--icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-island"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="explore__box explore__box--8">
-                        <div class="explore__heading">
-                            <div class="heading-tertiary">Your Social Meetings</div>
-                        </div>
-                            <p class="paragraph">
-                                Host a Family Party! The special celebration let you strengthen bonds with those your hold...
-                            </p>
-                            <p class="paragraph">
-                                We are pleased to offer our elegant outdoot venues or excellent ballrooms with expert planners to celebrate your specialdays.
-                            </p>
-                            <p class="paragraph">
-                                From a simple dinner to the joyous day and all the important milestones in between, Alucia can handle any...
-                            </p>
-                    </div>
-                </div> -->
             </section>
-            <section class="section section-book" id="book">
+            <section class="section-book" id="book">
                 <div class="section-book__title">
                     <div class="title">
                         <div class="title__main">Hotel Alucia</div>
@@ -893,72 +813,70 @@
                 </form>
             </section>
             <footer class="footer">
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="footer__logo-box">
-                            <div class="title">
-                                <div class="title__main">Hotel Alucia</div>
-                                <div class="title__sub">LUXURY HOTEL</div>
-                                <div class="title__rating">
-                                    <svg class="icon">
-                                        <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
-                                    </svg>                        
-                                    <svg class="icon">
-                                        <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
-                                    </svg>                        
-                                    <svg class="icon">
-                                        <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
-                                    </svg>                        
-                                    <svg class="icon">
-                                        <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
-                                    </svg>                        
-                                    <svg class="icon">
-                                        <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>                        
-                        <div class="footer__copyright">
-                            <p>All rights reserved.</p>
-                            <p>&copy; Copyright 2022 by Hotel <span>Alucia</span></p>
+                <div class="footer__logo-box">
+                    <div class="title">
+                        <div class="title__main">Hotel Alucia</div>
+                        <div class="title__sub">LUXURY HOTEL</div>
+                        <div class="title__rating">
+                            <svg class="icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
+                            </svg>                        
+                            <svg class="icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
+                            </svg>                        
+                            <svg class="icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
+                            </svg>                        
+                            <svg class="icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
+                            </svg>                        
+                            <svg class="icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
+                            </svg>
                         </div>
                     </div>
-                    <div class="col-1-of-3">
+                </div>                        
+                <div class="row">
+                    <div class="col-1-of-2">
                         <div class="footer__navigation">
                             <ul class="footer__list">
-                                <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
-                                <li class="footer__item"><a href="#rooms" class="footer__link">Rooms & Suites</a></li>
-                                <li class="footer__item"><a href="#feature" class="footer__link">Restaurant & Bars</a></li>
-                                <li class="footer__item"><a href="#explore" class="footer__link">Explore</a></li>
-                                <li class="footer__item"><a href="#blog" class="footer__link">Our News</a></li>
-                                <li class="footer__item"><a href="#" target="_blank" class="footer__link">FAQs</a></li>
+                                <li class="footer__item"><p data-link="about" class="footer__link">About</p></li>
+                                <li class="footer__item"><p data-link="rooms" class="footer__link">Rooms & Suites</p></li>
+                                <li class="footer__item"><p data-link="feature" class="footer__link">Restaurant & Bars</p></li>
+                                <li class="footer__item"><p data-link="explore" class="footer__link">Explore</p></li>
+                                <li class="footer__item"><p data-link="blog" class="footer__link">Our News</p></li>
                             </ul>
                         </div>
                         <div class="footer__icon-box">
-                            <a href="https://www.facebook.com">
+                            <a target="_blank" href="https://www.facebook.com">
                                 <svg class="footer__icon">
                                     <use xlink:href="/assets/icons/sprite.svg#icon-facebook"></use>
                                 </svg>
                             </a>
-                            <a href="https://www.twitter.com">
+                            <a target="_blank" href="https://www.twitter.com">
                                 <svg class="footer__icon">
                                     <use xlink:href="/assets/icons/sprite.svg#icon-twitter"></use>
                                 </svg>
                             </a>
-                            <a href="https://www.instagram.com">
+                            <a target="_blank" href="https://www.instagram.com">
                                 <svg class="footer__icon">
                                     <use xlink:href="/assets/icons/sprite.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </div>
                     </div>
-                    <div class="col-1-of-3">
+                    <div class="col-1-of-2">
                         <div class="footer__button">
-                            <a href="#" class="btn btn--black">Book Now!</a>
+                            <a href="#book" class="btn btn--black">Book Now!</a>
                         </div>
                     </div>
+                </div>
+                <div class="footer__copyright">
+                    <p>All rights reserved.</p>
+                    <p>&copy; Copyright 2022 by Hotel <span>Alucia</span></p>
                 </div>
             </footer>            
         </main>
     </body>
-</html>
+    </html>
+    

@@ -9,6 +9,10 @@
         padding: 1.5rem 2rem;
         font-family: $font-family-alt;
         border: none;
+
+        @media screen and (max-width: 375px) {
+            padding: 1rem 1.5rem;
+        }
     }
 
     &--default {

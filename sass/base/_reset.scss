@@ -9,6 +9,10 @@
 html {
     // 62.5% of 16px is 10, 1rem=10px;
     font-size: 62.5%;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 50%; //8px
+    }
 }
 
 body {
@@ -18,4 +22,8 @@ body {
     background-color: $color-black;
 
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }

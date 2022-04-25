@@ -1,23 +1,24 @@
-// MENU BUTTON FUNCTIONING
+// MENU BUTTON FUNCTIONALITY
 const navigation = document.getElementById('navigation');
 const menu = document.getElementById('menu');
-const menuLink = document.querySelectorAll('.menu__link');
+const menuLinks = document.querySelectorAll('.menu__link');
 const wrapper = document.getElementById('wrapper');
+const footerLinks = document.querySelectorAll('.footer__link');
 
 const menuFunctionality = function () {
     navigation.classList.toggle('navigation--inverted');
     wrapper.classList.toggle('wrapper--inverted');
     menu.classList.toggle('menu--active');
 
-    if (!menu.classList.contains('menu--active')) {
-        menuLink.forEach(link => {
-            link.style.opacity = 0;
-        });
-    } else {
-        menuLink.forEach((link, index) => {
+    if (menu.classList.contains('menu--active')) {
+        menuLinks.forEach((link, index) => {
             setTimeout(() => {
                 link.style.opacity = 1;
-            }, 1000 + index * 400);
+            }, 300 + index * 300);
+        });
+    } else {
+        menuLinks.forEach(link => {
+            link.style.opacity = 0;
         });
     }
 };
@@ -29,9 +30,42 @@ navigation.addEventListener('click', function (e) {
     menuFunctionality();
 });
 
-menuLink.forEach(link => {
+//helper function
+const delayBeforeScroll = function (id, opacityDelay, transitionDelay) {
+    menuLinks.forEach((link, index) => {
+        setTimeout(() => {
+            link.style.opacity = 0;
+        }, index * 70);
+    });
+
+    setTimeout(() => {
+        navigation.classList.toggle('navigation--inverted');
+        wrapper.classList.toggle('wrapper--inverted');
+        menu.classList.toggle('menu--active');
+
+        setTimeout(() => {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }, transitionDelay); // delay for wrapper transition
+    }, opacityDelay); // delay menu links disappearing
+};
+
+// MENU LINKS FUNCTIONALITY
+menuLinks.forEach(link => {
     link.addEventListener('click', () => {
-        menuFunctionality();
+        const id = link.dataset.link;
+        delayBeforeScroll(id, 850, 850);
+    });
+});
+
+// FOOTER LINKS FUNCTIONALITY
+footerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        const id = link.dataset.link;
+        if (menu.classList.contains('menu--active')) {
+            delayBeforeScroll(id, 600, 800);
+        } else {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
@@ -272,7 +306,7 @@ const revealSection = function (entries, observer) {
 
 const revealObserverOption = {
     root: null,
-    threshold: 0.2,
+    threshold: 0.1,
 };
 const sectionObserver = new IntersectionObserver(
     revealSection,

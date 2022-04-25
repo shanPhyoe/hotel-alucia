@@ -9,10 +9,26 @@
         pointer-events: none;
         transition: opacity 0.4s ease-in;
 
+        @media screen and (max-width: 1280px) {
+            width: 100rem;
+        }
+
+        @media screen and(max-width: 768px) {
+            width: 80rem;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+
         &--2,
         &--3 {
             position: absolute;
             top: 6rem;
+
+            @media screen and (max-width: 480px) {
+                top: 4rem;
+            }
         }
 
         &--active {
@@ -35,6 +51,7 @@
         border: none;
         position: absolute;
         bottom: 50%;
+        z-index: 3;
 
         &:hover {
             color: $font-color-inverted;
@@ -63,6 +80,12 @@
 
         //test
         // background-color: orangered;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 1rem;
+            width: 8rem;
+            justify-content: space-between;
+        }
 
         &__dot {
             width: 1rem;
