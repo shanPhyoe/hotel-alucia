@@ -6,6 +6,23 @@
         gap: 2rem;
         justify-content: center;
         flex-wrap: wrap;
+
+        @media screen and (max-width: 1200px) {
+            width: 90vw;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 1rem;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 100%;
+            gap: 0.5rem;
+        }
+
+        @media screen and (max-width: 320px) {
+            gap: 0;
+        }
     }
 
     &__content {
@@ -15,6 +32,10 @@
         flex-direction: column;
         align-items: center;
         transition: transform 0.3s;
+
+        @media screen and (max-width: 768px) {
+            width: 13rem;
+        }
     }
 
     &__icon {
@@ -22,6 +43,11 @@
         height: 3.6rem;
         fill: $color-primary-light;
         transition: transform 0.8s;
+
+        @media screen and (max-width: 768px) {
+            width: 2.8rem;
+            height: 2.8rem;
+        }
     }
 
     &__icon--active &__icon {
@@ -30,6 +56,7 @@
 
     &__text {
         font-size: $font-size-small;
+        text-align: center;
 
         // &::selection {
         //     background-color: $color-white;

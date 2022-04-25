@@ -9,5 +9,17 @@
     &--inverted {
         transform: translate(25%, 5%) scale(0.9);
         border-radius: 1rem;
+
+        @media screen and (max-width: 1200px) {
+            transform: translate(30%, 4%) scale(0.9);
+        }
+
+        @media screen and(max-width: 768px) {
+            transform: translate(50%, 7rem) scale(0.9);
+        }
+
+        @media screen and (max-width: 480px) {
+            transform: translate(100%, 0);
+        }
     }
 }

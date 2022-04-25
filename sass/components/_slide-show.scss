@@ -5,6 +5,18 @@
     position: relative;
     height: 20rem;
 
+    @media screen and (max-width: 1280px) {
+        height: 16rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 12rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 10rem;
+    }
+
     &__images {
         display: flex;
         position: absolute;
@@ -20,6 +32,18 @@
             opacity: 0.8;
             transition: transform 0.8s, opacity 0.8s;
             border-radius: 5px;
+
+            @media screen and (max-width: 1280px) {
+                height: 16rem;
+            }
+
+            @media screen and (max-width: 480px) {
+                height: 12rem;
+            }
+
+            @media screen and (max-width: 320px) {
+                height: 10rem;
+            }
 
             &:hover {
                 transform: scale(1.05);

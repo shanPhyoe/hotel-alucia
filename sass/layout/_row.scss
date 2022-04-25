@@ -1,18 +1,31 @@
 .row {
     width: 100%;
     display: flex;
-    // flex-wrap: wrap;
     align-items: center;
-    // justify-content: space-between;
-    column-gap: 3rem;
+    gap: 3rem;
 
-    &:not(:last-child) {
-        margin-bottom: 3rem;
+    @media screen and (max-width: 480px) {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 375px) {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .col-1-of-2 {
         width: 45%;
         flex: 1;
+
+        @media screen and (max-width: 375px) {
+            width: 70%;
+            gap: 0;
+        }
+
+        @media screen and (max-width: 375px) {
+            width: 80%;
+        }
     }
 
     .col-1-of-3 {
@@ -23,7 +36,11 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        // position: relative;
+
+        @media screen and (max-width: 480px) {
+            width: 40%;
+        }
     }
 }
 
