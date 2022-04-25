@@ -7,5 +7,7 @@
 
 .gitignore
 
+/css
+
 /test
 /coverage
