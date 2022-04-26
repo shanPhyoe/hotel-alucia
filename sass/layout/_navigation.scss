@@ -109,13 +109,18 @@
         padding: 0 !important;
         transition: color 0.8s ease-in-out, transform 0.8s ease-in-out;
         background-color: transparent;
+        font-size: $font-size-medium;
+        color: $font-color-default;
+        text-decoration: none;
 
         @media screen and (max-width: 480px) {
             margin-right: 3rem;
+            font-size: $font-size-default;
         }
 
         @media screen and (max-width: 375px) {
             margin-right: 1rem;
+            font-size: $font-size-small;
         }
 
         &:hover {
