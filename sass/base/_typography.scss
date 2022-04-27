@@ -8,32 +8,36 @@ body {
 
 .heading-primary {
     color: $color-white;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    // font-family: $font-family-alt;
 
     &--main {
         font-size: $font-size-huge;
+        margin-bottom: 1rem;
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 480px) {
             font-size: $font-size-x-large;
+            letter-spacing: 0.2rem;
         }
 
-        & span:last-child {
-            font-family: $font-family-alt;
-            font-weight: 700;
+        @media screen and (max-width: 320px) {
+            font-size: $font-size-s-large;
         }
     }
 
     &--sub {
+        // font-family: $font-family-alt;
         font-size: $font-size-large;
+        font-weight: 700;
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 480px) {
             font-size: $font-size-s-large;
+            letter-spacing: 0.1em;
         }
 
-        & span:nth-child(2),
-        & span:nth-child(3) {
-            font-family: $font-family-alt;
-            font-weight: 700;
+        @media screen and (max-width: 320px) {
+            font-size: $font-size-s-large;
         }
     }
 }
@@ -45,8 +49,12 @@ body {
         font-size: $font-size-x-large;
         letter-spacing: 0.1em;
 
+        @media screen and (max-width: 480px) {
+            letter-spacing: 2px;
+        }
+
         @media screen and (max-width: 375px) {
-            font-size: $font-size-large;
+            font-size: $font-size-s-large;
             letter-spacing: 1px;
         }
     }
@@ -55,7 +63,7 @@ body {
         font-size: $font-size-default;
 
         @media screen and (max-width: 375px) {
-            font-size: $font-size-small;
+            font-size: $font-size-default;
         }
     }
 }
@@ -65,12 +73,13 @@ body {
     font-weight: 700;
     letter-spacing: 0.1em;
 
-    @media screen and (max-width: 375px) {
-        font-size: $font-size-medium;
-    }
-
     & span {
         font-family: $font-family-alt;
+        color: $color-primary-dark;
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: $font-size-medium;
     }
 }
 

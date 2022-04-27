@@ -1,5 +1,5 @@
 .header {
-    height: calc(100vh - 13rem);
+    height: calc(100vh - 12rem);
     border-radius: 1.5rem;
     background-image: linear-gradient(
             to right,
@@ -26,7 +26,20 @@
         height: calc(50rem);
     }
 
-    &__text-box {
+    &__logo {
+        user-select: none;
+        font-family: $font-family-logo;
+        font-size: $font-size-large;
+        height: 6rem;
+        position: absolute;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        top: -6rem;
+        left: 50%;
+    }
+
+    &__text-container {
         white-space: nowrap;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -44,16 +57,29 @@
         position: absolute;
         bottom: 20%;
         right: 20%;
-        border: 3px solid $color-white;
+        transition: border 0.5s;
+        transition-delay: 0.1s;
+        border: 3px solid transparent;
+        border-radius: 1rem;
+
+        &:hover {
+            border: 3px solid $color-white;
+        }
     }
 
     &__button {
-        box-shadow: 0px 5px 10px rgba($color-white, 0.4);
+        // box-shadow: 0px 5px 10px rgba($color-white, 0.7);
         transform: translate(0.5rem, 0.5rem);
         transition: all 0.1s ease-in;
+        color: $color-white;
+        background-color: rgba($color-primary-dark, 0.7);
 
         &:focus {
             outline: none;
+        }
+
+        &:hover {
+            background-color: rgba($color-primary, 1);
         }
 
         &:active {

@@ -4,31 +4,24 @@
     margin: 0 auto;
 
     & .slide {
-        width: 120rem;
+        // width: 90rem;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.4s ease-in;
-
-        @media screen and (max-width: 1280px) {
-            width: 100rem;
-        }
-
-        @media screen and(max-width: 768px) {
-            width: 80rem;
-        }
+        margin-bottom: 12rem;
 
         @media screen and (max-width: 480px) {
-            width: 100%;
+            margin-bottom: 4rem;
         }
 
         &--2,
-        &--3 {
+        &--3,
+        &--4,
+        &--5,
+        &--6,
+        &--7 {
             position: absolute;
-            top: 6rem;
-
-            @media screen and (max-width: 480px) {
-                top: 4rem;
-            }
+            top: 0;
         }
 
         &--active {
@@ -71,19 +64,16 @@
     }
 
     & .dots {
-        margin: 0 auto 3rem;
+        margin: 0 auto;
         width: fit-content;
         height: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
-
         //test
         // background-color: orangered;
 
         @media screen and (max-width: 480px) {
-            margin-bottom: 1rem;
-            width: 8rem;
             justify-content: space-between;
         }
 
@@ -97,6 +87,10 @@
 
             &:not(:last-child) {
                 margin-right: 1rem;
+
+                @media screen and (max-width: 768px) {
+                    margin-right: 2rem;
+                }
             }
 
             &--active {

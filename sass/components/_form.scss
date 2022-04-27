@@ -1,21 +1,22 @@
 .form {
     width: 38rem;
-    background-color: rgba($font-color-default, 0.2);
+    background-color: rgba($color-white, 0.7);
     padding: 3rem 5rem;
-    border-radius: 3px;
+    border-radius: 1.5rem;
+    box-shadow: 0 3px 10px rgba($color-black, 0.3);
 
     &__heading {
+        font-size: $font-size-large;
+        font-weight: 700;
+        color: $color-primary-dark;
         width: fit-content;
         margin: 0 auto 3rem;
-        color: $color-white;
-        border-bottom: 2px solid $color-white;
+        border-bottom: 2px solid $color-primary-dark;
         transition: all 0.8s;
     }
 
     &:hover &__heading {
-        color: $color-primary-dark;
-        border-color: $color-primary-dark;
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     &__group {
@@ -42,7 +43,8 @@
         font-size: $font-size-default;
         padding: 1rem;
         background-color: $color-white;
-        border: none;
+        border: 1px solid $color-primary-dark;
+        border-radius: 1rem;
 
         &:focus {
             outline: none;

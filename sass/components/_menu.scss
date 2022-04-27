@@ -25,17 +25,9 @@
         display: none;
     }
 
-    &__item:nth-of-type(even) {
-        font-family: $font-family-default;
-        font-size: $font-size-huge;
-    }
-    &__item:nth-of-type(odd) {
-        font-size: $font-size-x-large;
+    &__item {
         font-family: $font-family-alt;
-    }
-    &__item:last-child {
-        font-family: $font-family-logo;
-        font-size: $font-size-x-large;
+        font-size: $font-size-large;
     }
 
     &__link {
