@@ -16,15 +16,8 @@
     </head>
     <body>
         <nav class="navigation" id="navigation">
-            <div class="navigation__menu"">
-                <span class="navigation__menu--text">Menu</span>
-                <span class="navigation__menu--icon">&nbsp;</span>
-            </div>
-            <a href="/" class="navigation__logo">
-                <div class="navigation__logo--sub">Hotel</div>
-                <div class="navigation__logo--main">Alucia</div>
-            </a>
-            <a href="#book" class="navigation__button">Book Now!</a>
+            <span class="navigation__text">Menu</span>
+            <span class="navigation__icon">&nbsp;</span>
         </nav>
         <nav class="menu" id="menu">
                 <ul class="menu__list">
@@ -39,7 +32,10 @@
         <main class="wrapper" id="wrapper">  
             <section class="section section-header">
                 <header class="header" id="header">
-                    <div class="header__text-box">
+                    <div class="header__logo">
+                        Alucia
+                    </div>
+                    <div class="header__text-container">
                         <h1 class="heading-primary">
                             <div class="heading-primary--main">
                                 <span id="layer-1">HOTEL</span>
@@ -55,13 +51,13 @@
                         </h1>
                     </div>
                     <div class="header__button-container">
-                        <a class="header__button btn btn--blue" id="header-button">Rooms & Suites</a>
+                        <a class="header__button btn" id="header-button">Rooms & Suites</a>
                     </div>
                 </header>
             </section>
             <section class="section section-about" id="about">
                         <div class="title section-about__title">
-                            <div class="title__main">Hotel Alucia</div>
+                            <div class="title__main">Alucia</div>
                             <div class="title__sub">LUXURY HOTEL</div>
                             <div class="title__rating">
                                 <svg class="icon">
@@ -80,19 +76,7 @@
                                     <use xlink:href="/assets/icons/sprite.svg#icon-star"></use>
                                 </svg>
                             </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-card--main">
-                                <svg class="icon">
-                                    <use xlink:href="/assets/icons/sprite.svg#icon-phone"></use>
-                                </svg>
-                                <div class="text">
-                                    <p>For Enquiry</p>
-                                    <p>+95 0800 400 106</p>
-                                </div>
-                            </div>
-                            <div class="info-card--sub">And it's toll-free!</div>
-                        </div>
+                        </div>                        
                     </div>
                     <img src="/assets/img/lobby.jpg" alt="hotel lobby" class="section-about__image section-about__image--1" id="parallax-img-1">
                     <img src="/assets/img/entrance.jpg" alt="hotel entrance" class="section-about__image section-about__image--2" id="parallax-img-2">
@@ -100,13 +84,11 @@
                         <div class="section-about__content">
                             <div class="section-about__heading">
                                 <h2 class="heading-secondary">
-                                    <div class="heading-secondary--main">Enjoy a Luxury Experience</div>
-                                    <div class="heading-secondary--sub">Our's guests' satisfaction is our first priority.</div>
+                                    <div class="heading-secondary--main">Enjoy the Luxury Experience</div>
                                 </h2>
                             </div>
                             <div class="section-about__text">
-                                <p class="paragraph">Welcome to the best five-star deluxe hotel in Bali.</p>
-                                <p class="paragraph">We offers a truly exquisite experience as a premium ocean view hotel.</p>
+                                <p class="paragraph">Welcome to the best five-star deluxe hotel in Bali. We offers a truly exquisite experience as a premium ocean view hotel.</p>
                                 <p class="paragraph">Designed in the style of a sumptuous shelter, over hundred rooms with personalized ocean view, added on by our foremost kitchen and flawless services...</p>
                             </div>
                         </div>
@@ -120,65 +102,70 @@
                     </h2>
                 </div>
                 <div class="slider">
-                    <div class="dots"></div>
                     <div class="slide slide--1">
-                        <div class="double-row">
-                            <div class="row">
-                                <div class="col-1-of-2">
-                                    <a href="#" class="room room--small">
-                                        <img src="./assets/img/deluxe-double.jpg" alt="deluxe double room" class="room__image">
-                                        <div class="btn btn--inverted room__text room__text--pos1">Deluxe Double</div>
-                                    </a>
-                                </div>
-                                <div class="col-1-of-2">
-                                    <a href="#" class="room room--small">
-                                        <img src="./assets/img/standard-double.jpg" alt="standard double room" class="room__image">
-                                        <div class="btn btn--inverted room__text room__text--pos2">Standard Double</div>
-                                    </a>
-                                </div>
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/deluxe-single-1.jpg" alt="deluxe single" class="room__image room__image--main">
+                                <img src="./assets/img/deluxe-single-2.jpg" alt="deluxe single" class="room__image room__image--sub">
                             </div>
-                            <div class="row">
-                                <a href="#" class="room room--large">
-                                    <img src="./assets/img/private-double.jpg" alt="standard double room" class="room__image">
-                                    <div class="btn btn--inverted room__text room__text--pos3">Private Double</div>
-                                </a>
-                            </div>
-                        </div>                        
+                            <h3 class="room__title">Deluxe Single</h3>
+                        </a>
                     </div>                    
                     <div class="slide slide--2">
-                        <div class="double-row">
-                            <a href="#" class="room room--medium">
-                                <div class="room__image-wrapper">
-                                    <img src="./assets/img/duplex-suite1.jpg" alt="duplex suite" class="room__image-wrapper--main">
-                                    <img src="./assets/img/duplex-suite2.jpg" alt="duplex suite" class="room__image-wrapper--sub">
-                                </div>
-                                <div class="btn btn--default room__text room__text--pos4">Duplex Suite</div>
-                            </a>
-                            <a href="#" class="room room--medium">
-                                <div class="room__image-wrapper">
-                                    <img src="./assets/img/junior-suite1.jpg" alt="junior suite" class="room__image-wrapper--main">
-                                    <img src="./assets/img/junior-suite2.jpg" alt="junior suite" class="room__image-wrapper--sub">
-                                </div>
-                                <div class="btn btn--default room__text room__text--pos4">Junior Suite</div>
-                            </a>
-                        </div>
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/standard-single-1.jpg" alt="standard single" class="room__image room__image--main">
+                                <img src="./assets/img/standard-single-2.jpg" alt="standard single" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Standard Single</h3>
+                        </a>
                     </div>
                     <div class="slide slide--3">
-                        <div class="double-row">
-                            <a href="#" class="room room--medium">
-                                <div class="room__image-wrapper">
-                                    <img src="./assets/img/deluxe-single.jpg" alt="deluxe single" class="room__image">
-                                </div>
-                                <div class="btn btn--inverted room__text room__text--pos4">Deluxe Single</div>
-                            </a>
-                            <a href="#" class="room room--medium">
-                                <div class="room__image-wrapper">
-                                    <img src="./assets/img/standard-single.jpg" alt="standard single" class="room__image">
-                                </div>
-                                <div class="btn btn--inverted room__text room__text--pos4">Standard Single</div>
-                            </a>
-                        </div>
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/deluxe-double-1.jpg" alt="deluxe double" class="room__image room__image--main">
+                                <img src="./assets/img/deluxe-double-2.jpg" alt="deluxe double" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Deluxe Double</h3>
+                        </a>
                     </div>
+                    <div class="slide slide--4">
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/standard-double-1.jpg" alt="standard double" class="room__image room__image--main">
+                                <img src="./assets/img/standard-double-2.jpg" alt="standard double" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Standard Double</h3>
+                        </a>
+                    </div>
+                    <div class="slide slide--5">
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/private-double-1.jpg" alt="private double" class="room__image room__image--main">
+                                <img src="./assets/img/private-double-2.jpg" alt="private double" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Private Double</h3>
+                        </a>
+                    </div>
+                    <div class="slide slide--6">
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/junior-suite-1.jpg" alt="junior suite" class="room__image room__image--main">
+                                <img src="./assets/img/junior-suite-2.jpg" alt="junior suite" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Junior Suite</h3>
+                        </a>
+                    </div>
+                    <div class="slide slide--7">
+                        <a href="#" class="room">
+                            <div class="room__images-holder">
+                                <img src="./assets/img/duplex-suite-1.jpg" alt="duplex suite" class="room__image room__image--main">
+                                <img src="./assets/img/duplex-suite-2.jpg" alt="duplex suite" class="room__image room__image--sub">
+                            </div>
+                            <h3 class="room__title">Duplex Double</h3>
+                        </a>
+                    </div>
+                    <div class="dots"></div>
                     <button class="slider__btn slider__btn--left">&ltcc;</button>
                     <button class="slider__btn slider__btn--right">&gtcc;</button>
                 </div>                
@@ -193,37 +180,36 @@
                     <div class="feature-box__images-container">
                         <div class="feature-box__images-box feature-box__images-box--1">
                             <img src="/assets/img/res-1.jpg" alt="hotel indoor restaurant" class="feature-box__images feature-box__images--1">
-                            <img src="/assets/img/res-2.jpg" alt="hotel outdoor restaurant"class="feature-box__images feature-box__images--2">
+                            <img src="/assets/img/res-2.jpg" alt="hotel outdoor restaurant" class="feature-box__images feature-box__images--2">
                         </div>
                         <div class="feature-box__images-box feature-box__images-box--2">
                             <img src="/assets/img/res-3.jpg" alt="hotel inroom dining preparation" class="feature-box__images feature-box__images--1">
-                            <img src="/assets/img/res-4.jpg" alt="hotel inroom dining preparation"class="feature-box__images feature-box__images--2">
+                            <img src="/assets/img/res-4.jpg" alt="hotel inroom dining preparation" class="feature-box__images feature-box__images--2">
                         </div>
                         <div class="feature-box__images-box feature-box__images-box--3">
                             <img src="/assets/img/res-5.jpg" alt="hotel roof top bar interior" class="feature-box__images feature-box__images--1">
-                            <img src="/assets/img/res-6.jpg" alt="hotel roof top bar with ocean view"class="feature-box__images feature-box__images--2">
+                            <img src="/assets/img/res-6.jpg" alt="hotel roof top bar with ocean view" class="feature-box__images feature-box__images--2">
                         </div>
                         <div class="feature-box__images-box feature-box__images-box--4">
                             <img src="/assets/img/res-7.jpg" alt="hotel poolside bar at night" class="feature-box__images feature-box__images--1">
-                            <img src="/assets/img/res-8.jpg" alt="hotel poolside bar interior"class="feature-box__images feature-box__images--2">
+                            <img src="/assets/img/res-8.jpg" alt="hotel poolside bar interior" class="feature-box__images feature-box__images--2">
                         </div>
                     </div>                            
                     <div class="feature-box__labels-container">
-                        <div class="feature-box__label" data-key="0">the Restaurant</div>
-                        <div class="feature-box__label" data-key="1">in Room Dining</div>
-                        <div class="feature-box__label" data-key="2">roof top Bar</div>
-                        <div class="feature-box__label" data-key="3">poolside Bar</div>
+                        <div class="feature-box__label" data-key="0">The Restaurant</div>
+                        <div class="feature-box__label" data-key="1">In Room Dining</div>
+                        <div class="feature-box__label" data-key="2">Roof Top Bar</div>
+                        <div class="feature-box__label" data-key="3">Poolside Bar</div>
                     </div>
                     <div class="feature-box__text-container">
                         <div class="feature-box__text-box feature-box__text-box--1">
-                            <p class="paragraph">Founding beside the lovely sea, sits our Fine Dining Restaurant, known for its excellent services and unique view.</p>
-                            <p class="paragraph">We offers our valuable guests unique genuine delicious meals, assured creating unforgettable dining experience with your loves ones.</p>
+                            <p class="paragraph">Founding beside the lovely sea, sits our Fine Dining Restaurant, known for its excellent services and unique view.</p>                       
                             <p class="paragraph">The creation of our top-tier chefs will never bore you with always different and delicious dishes, as well as our daily Tasting Menu in the evening.</p>
                             <p class="paragraph">With a magical blend of accurate service, elegance of dining hall or majestic ocean view and from local to foreign cuisine, pampering by our friendly staff, your satisfaction will never cease.</p>
                         </div>
                         <div class="feature-box__text-box feature-box__text-box--2">
-                            <p class="paragraph">Whether you would like to enjoy a quiet private time, or to experience a romantic meal in your stay,</p>
-                            <p class="paragraph">everything on our Restaurant menu can be delivered to be enjoyed at the privacy of your room.</p>
+                            <p class="paragraph">Whether you would like to enjoy a quiet private time, or to experience a romantic meal in your stay, everything on our Restaurant menu can be delivered to be enjoyed at the privacy of your room.</p>
+                            <p class="paragraph">We offers our valuable guests unique genuine delicious meals, assured creating unforgettable dining experience with your loves ones.</p>
                         </div>
                         <div class="feature-box__text-box feature-box__text-box--3">
                             <p class="paragraph">Open daily from 9 a.m to 2 a.m, our bars offers a multitude of beverages.</p>
@@ -265,223 +251,7 @@
                     <img src="/assets/img/menu-7.jpg" alt="hotel restaurant menu item">
                     <img src="/assets/img/menu-8.jpg" alt="hotel restaurant menu item">                       
                 </div>
-            </section>
-            <section class="section section-services">
-                <div class="section-services__heading">
-                    <h2 class="heading-secondary">
-                        <div class="heading-secondary--main">Services & Amenities</div>
-                        <div class="heading-secondary--sub">We reimagined concurrent luxury...</div>
-                    </h2>
-                </div>
-                <div class="services">
-                    <div class="services__wrapper">                        
-                        <div class="services__content">
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-hours"></use>
-                            </svg>
-                            <div class="services__text">24 Hours Front Desk</div>
-                        </div>
-                        <div class="services__content">
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-phone-classic"></use>
-                            </svg>
-                            <div class="services__text">Toll Free Calls</div> 
-                        </div>
-                        <div class="services__content">
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-account-voice"></use>
-                            </svg>
-                            <div class="services__text">Multilingual Staffs</div>                             
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-hand-heart"></use>
-                            </svg>
-                            <div class="services__text">Generous Hospitality</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-online-booking"></use>
-                            </svg>
-                            <div class="services__text">Online Booking</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-shuttle"></use>
-                            </svg>
-                            <div class="services__text">Free Airport Transfer</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-wine"></use>
-                            </svg>
-                            <div class="services__text">Welcome Drinks</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-leaf"></use>
-                            </svg>
-                            <div class="services__text">Refreshing Lobby</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-couch"></use>
-                            </svg>
-                            <div class="services__text">Cosy Guest Room</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-express"></use>
-                            </svg>
-                            <div class="services__text">Express Check-in</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-atm"></use>
-                            </svg>
-                            <div class="services__text">Access to ATM</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-wifi"></use>
-                            </svg>
-                            <div class="services__text">High-speed Wifi</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-smoking"></use>
-                            </svg>
-                            <div class="services__text">Smoking Areas</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-babysitting"></use>
-                            </svg>
-                            <div class="services__text">Babysitting</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-room-service"></use>
-                            </svg>
-                            <div class="services__text">Room Service</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-washing-machine"></use>
-                            </svg>
-                            <div class="services__text">Laundry Service</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-vacuum"></use>
-                            </svg>
-                            <div class="services__text">Daily Housekeeping</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-ocean"></use>
-                            </svg>
-                            <div class="services__text">Breathtaking View</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-tv"></use>
-                            </svg>
-                            <div class="services__text">Satellite Channels</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-gymnasium"></use>
-                            </svg>
-                            <div class="services__text">Gymnasium</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-user-shield"></use>
-                            </svg>
-                            <div class="services__text">Privacy Considerated</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-e-payment"></use>
-                            </svg>
-                            <div class="services__text">Accept E-payment</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-chef"></use>
-                            </svg>
-                            <div class="services__text">World Ranked Chefs</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-dinner"></use>
-                            </svg>
-                            <div class="services__text">Ocean View Dinning</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-mr--mrs"></use>
-                            </svg>
-                            <div class="services__text">Mr. & Mrs. Tailored</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-car"></use>
-                            </svg>
-                            <div class="services__text">Car Hire</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-sail-boat"></use>
-                            </svg>
-                            <div class="services__text">Trip out to Sea</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-spa"></use>
-                            </svg>
-                            <div class="services__text">Relaxing Spa</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-pool"></use>
-                            </svg>
-                            <div class="services__text">Wide Pools</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-thermometer-water"></use>
-                            </svg>
-                            <div class="services__text">Hot Water</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-coffee-maker"></use>
-                            </svg>
-                            <div class="services__text">Coffee Maker in Room</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-security"></use>
-                            </svg>
-                            <div class="services__text">24 Hours Security</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-martini"></use>
-                            </svg>
-                            <div class="services__text">Roof Top Bar</div> 
-                        </div>
-                        <div class="services__content">                             
-                            <svg class="services__icon">
-                                <use xlink:href="/assets/icons/sprite.svg#icon-car-parking"></use>
-                            </svg>
-                            <div class="services__text">Car Parking</div>                        
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </section>            
             <section class="section section-explore" id="explore">
                 <div class="section-explore__heading">
                     <h2 class="heading-secondary">
@@ -537,7 +307,6 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                     <div class="row">
                         <div class="col-1-of-2">
                             <div class="explore__box explore__box--image">
@@ -585,7 +354,6 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                     <div class="row">
                         <div class="col-1-of-2">
                             <div class="explore__box explore__box--text explore__box--text-1">
@@ -633,7 +401,6 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                     <div class="row">
                         <div class="col-1-of-2">
                             <div class="explore__box explore__box--image">
@@ -681,12 +448,57 @@
                             </div>
                         </div>
                     </div>
+                </div>            
+            </section>
+            <section class="section section-services">
+                <div class="section-services__heading">
+                    <h2 class="heading-secondary">
+                        <div class="heading-secondary--main">Services & Amenities</div>
+                    </h2>
+                </div>
+                <p class="paragraph">We know that you are here to take deluxe services to take a break from your daily routines. Here you can enjoy world-class services amidst tranquil environment with breathtaking ocean view. We are also known for our unique servies which are quite desirable that everyone enjoys.</p>
+                <div class="section-services__cards-holder">
+                    <div class="card">
+                            <svg class="card__icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-hours"></use>
+                            </svg> 
+                        <div class="card__title">24 Hours Front Desk</div>
+                        <div class="card__text">Flight delay or late night check-in? Don't worry. There will always be someone at our reception to welcome you.</div>
+                    </div>
+                    <div class="card">
+                            <svg class="card__icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-account-voice"></use>
+                            </svg> 
+                        <div class="card__title">Multilingual Staffs</div>
+                        <div class="card__text">Our guest's satisfaction is our first priority. Our staffs are here at your disposal to align with your needs.</div>
+                    </div>
+                    <div class="card">
+                            <svg class="card__icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-express"></use>
+                            </svg> 
+                        <div class="card__title">Express Check-in</div>
+                        <div class="card__text">We offer express check-in so that you don't have to wait at our lobby after a long flight.</div>
+                    </div>
+                    <div class="card">
+                            <svg class="card__icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-hand-heart"></use>
+                            </svg> 
+                        <div class="card__title">Medical Team on Call</div>
+                        <div class="card__text">Alucia itself is a safe place but in case you are in need of medical aids, we have medical team on call.</div>
+                    </div>
+                    <div class="card">
+                            <svg class="card__icon">
+                                <use xlink:href="/assets/icons/sprite.svg#icon-shuttle"></use>
+                            </svg> 
+                        <div class="card__title">Airport Transfer</div>
+                        <div class="card__text">Don't worry about transportation. We arrange airport transfers so that you don't have to wait a cap with heavy luggage.</div>
+                    </div>
                 </div>
             </section>
             <section class="section-book" id="book">
                 <div class="section-book__title">
                     <div class="title">
-                        <div class="title__main">Hotel Alucia</div>
+                        <div class="title__main">Alucia</div>
                         <div class="title__sub">LUXURY HOTEL</div>
                         <div class="title__rating">
                             <svg class="icon">
@@ -723,10 +535,7 @@
                 </div>
                 <div class="section-book__form">
                     <form action="#" class="form">
-                        <div class="form__heading">
-                            <div class="heading-tertiary">
-                                Reservation
-                            </div>
+                        <div class="form__heading">Reservation
                         </div>
                         <div class="form__group">
                             <input type="date" class="form__input" id="check-in">
@@ -770,34 +579,40 @@
                 <div class="section-blog__news">
                     <div class="row">
                         <div class="col-1-of-3">
-                            <a href="#" class="news">
+                            <div class="news">
                                 <div class="news__date">
                                     <span class="news__date--day">08</span>
                                     <span class="news__date--month">May</span>
                                 </div>
                                 <img src="./assets/img/news-1.jpg" alt="romantic canoe boat" class="news__image">
-                                <div class="news__title">Romantic Canoe Introduced!</div>
-                            </a>
+                                <div class="news__title">
+                                    <span class="news__title-span">Romantic Canoe Introduced!</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-1-of-3">
-                            <a href="#" class="news">
+                            <div class="news">
                                 <div class="news__date">
                                     <span class="news__date--day">25</span>
                                     <span class="news__date--month">Apr</span>
                                 </div>
                                 <img src="./assets/img/news-2.jpg" alt="blossoms for wedding" class="news__image">
-                                <div class="news__title">Variety of blossoms accessible for your wedding now!</div>
-                            </a>
+                                <div class="news__title">
+                                    <span class="news__title-span">Variety of blossoms accessible for your wedding now!</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-1-of-3">
-                            <a href="#" class="news">
+                            <div class="news">
                                 <div class="news__date">
                                     <span class="news__date--day">09</span>
                                     <span class="news__date--month">Apr</span>
                                 </div>
                                 <img src="./assets/img/news-3.jpg" alt="yoga class" class="news__image">
-                                <div class="news__title">Don't skip Yoga class.<br>It's here now!</div>
-                            </a>
+                                <div class="news__title">
+                                    <span class="news__title-span">Don't skip Yoga class.<br>It's here now!</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -815,7 +630,7 @@
             <footer class="footer">
                 <div class="footer__logo-box">
                     <div class="title">
-                        <div class="title__main">Hotel Alucia</div>
+                        <div class="title__main">Alucia</div>
                         <div class="title__sub">LUXURY HOTEL</div>
                         <div class="title__rating">
                             <svg class="icon">

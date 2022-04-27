@@ -2,8 +2,16 @@
     margin: 0 auto;
     width: 100rem;
 
+    & > .row {
+        margin-bottom: 5rem;
+    }
+
     @media screen and (max-width: 768px) {
         width: 80rem;
+
+        & > .row {
+            margin-bottom: 1rem;
+        }
     }
 
     @media screen and (max-width: 480px) {
@@ -12,7 +20,7 @@
         & > .row {
             display: flex;
             flex-direction: column;
-            margin-bottom: 2rem;
+            margin-bottom: 6rem;
             gap: 0;
 
             .col-1-of-2 {
@@ -47,7 +55,11 @@
 
     &__heading {
         width: fit-content;
-        margin: 0 auto 3rem;
+        margin-bottom: 3rem;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 1rem;
+        }
     }
 
     &__image {
@@ -67,22 +79,21 @@
         }
 
         &--text {
-            border-radius: 5px;
+            border-radius: 3rem;
             padding: 0.5rem 1rem;
             color: $color-primary;
             opacity: 0;
             background: linear-gradient(
                 to right,
                 transparent 50%,
-                rgba($color-white, 0.5) 50%
+                $color-white 50%
             );
             background-size: 200% 100%;
             background-position: left;
             transition: all 0.8s ease-out;
 
             @media screen and (max-width: 768px) {
-                opacity: 1;
-                background: rgba($color-white, 0.5);
+                background: rgba($color-white, 0.8);
             }
         }
 
@@ -97,9 +108,12 @@
             width: 3.6rem;
             fill: $color-white;
             transition: fill 0.8s;
+            border-radius: 1rem;
 
             @media screen and (max-width: 768px) {
+                margin: 2rem 1rem;
                 fill: $color-primary;
+                background-color: rgba($color-white, 0.8);
             }
 
             @media screen and (max-width: 375px) {
@@ -111,6 +125,7 @@
 
         &:hover &--icon {
             fill: $color-primary;
+            background-color: rgba($color-white, 0.8);
         }
     }
 }

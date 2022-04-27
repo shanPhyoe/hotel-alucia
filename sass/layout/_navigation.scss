@@ -1,130 +1,66 @@
 .navigation {
     position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 7rem;
+    top: 2rem;
+    left: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: color 0.8s ease-in-out;
     z-index: 9999;
     font-family: $font-family-alt;
+    cursor: pointer;
 
     @media screen and (max-width: 480px) {
-        height: 6rem;
+        left: 4rem;
     }
 
-    &__menu {
-        margin-left: 6rem;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
+    @media screen and (max-width: 375px) {
+        left: 2rem;
+    }
+
+    &__icon {
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            background-color: $font-color-default;
+            width: 2.5rem;
+            height: 1px;
+            transition: all 0.8s ease-in-out;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -5px;
+        }
+
+        &::after {
+            top: 5px;
+        }
+    }
+
+    &:hover &__icon {
+        transform: translate(1rem);
+    }
+
+    &__text {
+        font-size: $font-size-small;
+        margin-right: 2rem;
 
         @media screen and (max-width: 480px) {
-            margin-left: 3rem;
-        }
-
-        @media screen and (max-width: 375px) {
-            margin-left: 1rem;
-        }
-
-        &--icon {
-            position: relative;
-
-            &,
-            &::before,
-            &::after {
-                display: inline-block;
-                background-color: $font-color-default;
-                width: 2.5rem;
-                height: 1px;
-                transition: all 0.8s ease-in-out;
-            }
-
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-            }
-
-            &::before {
-                top: -5px;
-            }
-
-            &::after {
-                top: 5px;
-            }
-        }
-
-        &:hover &--icon {
-            transform: translate(1rem);
-        }
-
-        &--text {
-            font-size: $font-size-small;
-            margin-right: 2rem;
-
-            @media screen and (max-width: 480px) {
-                margin-right: 1rem;
-            }
-
-            @media screen and (max-width: 375px) {
-                margin-right: 0.5rem;
-            }
-        }
-    }
-
-    &__logo {
-        color: $font-color-default;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        transition: color 0.8s ease-in-out;
-        cursor: pointer;
-
-        &--sub {
-            font-size: $font-size-small;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        &--main {
-            font-family: $font-family-logo;
-            font-size: $font-size-medium;
-            transition: transform 0.8s ease-in-out;
-        }
-
-        &:hover &--sub {
-            opacity: 0;
-        }
-
-        &:hover &--main {
-            transform: scale(1.1) translateY(-1rem);
-        }
-    }
-
-    &__button {
-        margin-right: 6rem;
-        padding: 0 !important;
-        transition: color 0.8s ease-in-out, transform 0.8s ease-in-out;
-        background-color: transparent;
-        font-size: $font-size-medium;
-        color: $font-color-default;
-        text-decoration: none;
-
-        @media screen and (max-width: 480px) {
-            margin-right: 3rem;
-            font-size: $font-size-default;
-        }
-
-        @media screen and (max-width: 375px) {
             margin-right: 1rem;
-            font-size: $font-size-small;
         }
 
-        &:hover {
-            transform: scale(1.05);
+        @media screen and (max-width: 375px) {
+            margin-right: 0.5rem;
         }
     }
 
@@ -132,31 +68,20 @@
         color: $font-color-inverted;
     }
 
-    &--inverted &__logo {
-        color: $font-color-inverted;
-    }
-    &--inverted &__button {
-        color: $font-color-inverted;
-    }
+    &--inverted &__icon {
+        height: 0;
+        background-color: transparent;
 
-    &--inverted &__menu {
-        color: $font-color-inverted;
+        &::before,
+        &::after {
+            background-color: $font-color-inverted;
+        }
 
-        &--icon {
-            height: 0;
-            background-color: transparent;
-
-            &::before,
-            &::after {
-                background-color: $font-color-inverted;
-            }
-
-            &::before {
-                transform: translateY(5px) rotate(405deg);
-            }
-            &::after {
-                transform: translateY(-5px) rotate(-405deg);
-            }
+        &::before {
+            transform: translateY(5px) rotate(405deg);
+        }
+        &::after {
+            transform: translateY(-5px) rotate(-405deg);
         }
     }
 }

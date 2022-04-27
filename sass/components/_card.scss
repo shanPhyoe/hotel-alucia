@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    width: 25rem;
+    background: rgba($color-secondary, 0.9);
+    border-radius: 1.5rem;
+    transition: transform 0.8s ease-out;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+
+    &__icon {
+        fill: $color-black;
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+        transition: transform 0.8s ease-out;
+
+        &--active {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: $font-size-medium;
+        color: $color-black;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        color: $color-black;
+    }
+}

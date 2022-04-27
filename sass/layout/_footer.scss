@@ -107,6 +107,7 @@
         width: fit-content;
         display: block;
         border: 2px solid $color-white;
+        border-radius: 1.5rem;
 
         @media screen and (max-width: 768px) {
             margin: auto 0 auto auto;

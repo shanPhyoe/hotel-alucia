@@ -6,13 +6,18 @@
         font-size: $font-size-medium;
         text-decoration: none;
         cursor: pointer;
-        padding: 1.5rem 2rem;
+        padding: 1rem 2rem;
         font-family: $font-family-alt;
         border: none;
+        border-radius: 1rem;
 
         @media screen and (max-width: 375px) {
             padding: 1rem 1.5rem;
         }
+    }
+
+    &--white {
+        color: $color-white;
     }
 
     &--default {

@@ -23,10 +23,7 @@ const menuFunctionality = function () {
     }
 };
 
-navigation.addEventListener('click', function (e) {
-    const menuButton = e.target.closest('.navigation__menu');
-    if (!menuButton) return;
-
+navigation.addEventListener('click', function () {
     menuFunctionality();
 });
 
@@ -82,31 +79,31 @@ const layerSix = document.getElementById('layer-6');
 // percentage of value calculated
 const parallaxMultiplierOne = 0.01;
 const parallaxMultiplierTwo = 0.02;
-const parallaxMultiplierThree = 0.04;
+const parallaxMultiplierThree = 0.03;
 
 header.addEventListener('mousemove', function (e) {
     const pageX = e.clientX - window.innerWidth / 2;
     const pageY = e.clientY - window.innerHeight / 2;
 
     layerOne.style.transform = `translate(${
-        20 - pageX * parallaxMultiplierThree
-    }%, ${20 - pageY * parallaxMultiplierThree}%)`;
-
-    layerTwo.style.transform = `translate(${
         20 - pageX * parallaxMultiplierOne
     }%, ${20 - pageY * parallaxMultiplierOne}%)`;
+
+    layerTwo.style.transform = `translate(${
+        20 - pageX * parallaxMultiplierTwo
+    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
 
     layerThree.style.transform = `translate(${
         20 - pageX * parallaxMultiplierThree
     }%, ${20 - pageY * parallaxMultiplierThree}%)`;
 
     layerFour.style.transform = `translate(${
-        20 - pageX * parallaxMultiplierTwo
-    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+        20 - pageX * parallaxMultiplierOne
+    }%, ${20 - pageY * parallaxMultiplierOne}%)`;
 
     layerFive.style.transform = `translate(${
-        20 - pageX * parallaxMultiplierTwo
-    }%, ${20 - pageY * parallaxMultiplierTwo}%)`;
+        20 - pageX * parallaxMultiplierOne
+    }%, ${20 - pageY * parallaxMultiplierOne}%)`;
 
     layerSix.style.transform = `translate(${
         20 - pageX * parallaxMultiplierThree
@@ -262,18 +259,18 @@ featuredLabels.forEach(label => {
 
 // -------------------------------------------------------------------- //
 // ICON ANIMATION
-const servicesIconBoxes = document.querySelectorAll('.services__content');
+// const cardIcons = document.querySelectorAll('.card__icon');
 
-servicesIconBoxes.forEach(box => {
-    box.addEventListener('mouseenter', function () {
-        box.classList.add('services__icon--active');
+// cardIcons.forEach(box => {
+//     icon.addEventListener('mouseenter', function () {
+//         icon.classList.add('card__icon--active');
 
-        // 800ms is rotate-transition
-        setTimeout(() => {
-            box.classList.remove('services__icon--active');
-        }, 800);
-    });
-});
+//         // 800ms is rotate-transition
+//         setTimeout(() => {
+//             box.classList.remove('card__icon--active');
+//         }, 800);
+//     });
+// });
 
 // -------------------------------------------------------------------- //
 // FORM LABEL WAVE ANIMATION
